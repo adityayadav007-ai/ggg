@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f2df">
+  <meta name="description" content="Gauriganesh Ghee — pure desi ghee, traditionally made and carefully packed. Available in 250 g, 500 g and 1 kg jars. Order on WhatsApp.">
+  <title>Gauriganesh Ghee | Pure Desi Ghee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --cream: #f8f2df;
+      --paper: #fffdf4;
+      --gold: #d39a21;
+      --gold-light: #f1d77d;
+      --brown: #542b35;
+      --brown-soft: #685252;
+      --green: #087c78;
+      --peacock: #075c70;
+      --teal: #168f89;
+      --marigold: #e7a526;
+      --line: rgba(65, 53, 48, .15);
+      --shadow: 0 16px 42px rgba(61, 54, 42, .11);
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Segoe UI", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body {
+      margin: 0;
+      background-color: var(--cream);
+      background-image:
+        radial-gradient(circle at 12px 12px, rgba(7, 92, 112, .035) 1.2px, transparent 1.6px),
+        radial-gradient(circle at 0 0, transparent 10px, rgba(7, 92, 112, .025) 10.5px, transparent 11px);
+      background-size: 24px 24px, 24px 24px;
+      color: var(--brown);
+      font-family: var(--sans);
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    img { max-width: 100%; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #a56a12;
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+    h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
+    h2 { margin: 0 0 14px; font-size: clamp(2rem, 4vw, 3rem); }
+    .section-intro { max-width: 620px; margin: 0 auto 38px; color: var(--brown-soft); }
+    section { position: relative; padding: 82px 0; }
+    section:not(.hero)::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 15px;
+      background:
+        radial-gradient(circle at 6px 6px, var(--marigold) 0 3px, transparent 3.8px) 0 0 / 24px 12px repeat-x,
+        radial-gradient(ellipse at 18px 10px, #438879 0 2px, transparent 2.8px) 0 0 / 24px 12px repeat-x;
+      content: "";
+      opacity: .8;
+      pointer-events: none;
+    }
+    .yamuna-divider {
+      height: 30px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(22,143,137,.05), rgba(7,92,112,.09));
+    }
+    .yamuna-divider svg { display: block; width: 100%; height: 100%; }
+    .yamuna-divider path { fill: none; stroke: #168f89; stroke-linecap: round; stroke-width: 2; opacity: .5; }
+    .section-ornament { display: flex; justify-content: center; margin: -14px auto 22px; color: var(--marigold); }
+    .section-ornament svg { width: 42px; height: 34px; }
+    .section-heading { margin: 0 auto 42px; max-width: 680px; text-align: center; }
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 22px;
+      background: var(--green);
+      color: #fff;
+      font: 700 .94rem var(--sans);
+      text-decoration: none;
+      box-shadow: 0 8px 18px rgba(8, 124, 120, .18);
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .button:hover { background: #05645f; box-shadow: 0 11px 22px rgba(8, 124, 120, .24); transform: translateY(-2px); }
+    .button:focus-visible, a:focus-visible, summary:focus-visible, button:focus-visible {
+      outline: 3px solid #bd7d15;
+      outline-offset: 4px;
+    }
+    .button--outline { border: 1px solid rgba(255,255,255,.55); background: transparent; box-shadow: none; }
+    .button--outline:hover { background: rgba(255,255,255,.12); }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      z-index: 10;
+      top: 0;
+      background: rgba(248, 242, 223, .95);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+    .header-inner { display: flex; min-height: 76px; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; white-space: nowrap; }
+    .brand-mark {
+      display: grid;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      border: 1px solid #e8c66f;
+      border-radius: 50%;
+      background: #f8e9be;
+      color: var(--peacock);
+      font: 700 1.1rem var(--serif);
+    }
+    .brand-copy { display: flex; flex-direction: column; line-height: 1.12; }
+    .brand-name { font: 700 1.12rem var(--serif); letter-spacing: -.02em; }
+    .nav { display: flex; align-items: center; gap: clamp(14px, 2vw, 28px); }
+    .nav a { color: var(--brown-soft); font-size: .9rem; font-weight: 650; text-decoration: none; }
+    .nav a:hover { color: var(--teal); }
+    .header-cta { min-height: 43px; padding: 10px 17px; font-size: .86rem; white-space: nowrap; }
+    .menu-toggle { display: none; border: 0; background: transparent; color: var(--brown); font-size: 1.55rem; cursor: pointer; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 80px 0 86px;
+      background:
+        radial-gradient(ellipse at 83% 42%, rgba(255, 190, 71, .35), transparent 34%),
+        radial-gradient(ellipse at 7% 84%, rgba(22, 143, 137, .13), transparent 34%),
+        linear-gradient(120deg, #fff5d8 0%, #f9e3ad 48%, #f8f2df 100%);
+    }
+    .hero::after {
+      position: absolute;
+      right: -100px;
+      bottom: -240px;
+      width: 490px;
+      height: 490px;
+      border: 1px solid rgba(7, 92, 112, .14);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 48px; }
+    .hero h1 {
+      max-width: 620px;
+      margin: 0 0 18px;
+      color: var(--brown);
+      font: 700 clamp(2.8rem, 6vw, 5rem)/1.2 "Tiro Devanagari Hindi", "Noto Serif Devanagari", Georgia, serif;
+    }
+    .hero h1 span { color: var(--green); }
+    .hero-copy { max-width: 520px; margin: 0 0 19px; color: var(--brown-soft); font-size: 1.1rem; }
+    .hero-note { display: flex; align-items: center; gap: 9px; margin-top: 18px; color: #776046; font-size: .86rem; }
+    .hero-note::before { color: #c28a24; content: "✦"; }
+    .hero-visual { position: relative; display: grid; min-height: 390px; place-items: center; }
+    .sun-disc { position: absolute; width: min(340px, 80%); aspect-ratio: 1; border-radius: 50%; background: linear-gradient(145deg, #f7d96c, #f0ad37); box-shadow: inset 0 0 0 18px rgba(255,255,255,.2), 0 0 70px rgba(224,149,35,.17); }
+    /* PHOTO PLACEHOLDER: replace the illustrated jar below with a real product photograph if available. */
+    .jar-art { position: relative; z-index: 1; display: flex; width: 220px; height: 278px; align-items: center; flex-direction: column; filter: drop-shadow(0 22px 18px rgba(91, 58, 18, .2)); }
+    .jar-lid { width: 110px; height: 29px; border: 3px solid #926214; border-radius: 8px 8px 4px 4px; background: linear-gradient(#d09a38, #ad741d); }
+    .jar-neck { width: 96px; height: 20px; border-inline: 5px solid rgba(255,255,255,.55); background: #f7ddb0; }
+    .jar-body {
+      display: grid;
+      width: 190px;
+      height: 220px;
+      place-items: center;
+      border: 5px solid rgba(255,255,255,.64);
+      border-radius: 28px 28px 38px 38px;
+      background: linear-gradient(90deg, rgba(255,255,255,.45), rgba(255,255,255,.08) 30%, rgba(255,255,255,.38)), #f7e4bd;
+    }
+    .jar-label { width: 145px; padding: 17px 8px; border: 1px solid #d5ad58; background: #fff8e6; text-align: center; }
+    .jar-label strong { display: block; font: 700 1.12rem var(--serif); }
+    .jar-label small { color: #84602b; font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; }
+    .jar-ghee { width: 100%; height: 38px; border-radius: 0 0 30px 30px; background: linear-gradient(#edc24f, #d99a21); }
+    .hero-stamp { position: absolute; right: 3%; bottom: 11%; z-index: 2; display: grid; width: 95px; height: 95px; place-items: center; border: 1px dashed #9d6e20; border-radius: 50%; background: var(--paper); color: #79500f; font: 700 .78rem var(--serif); text-align: center; transform: rotate(9deg); }
+
+    .trust-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; padding: 22px 0; border-top: 1px solid rgba(7,92,112,.14); border-bottom: 1px solid rgba(7,92,112,.14); background: rgba(255,253,244,.68); }
+    .trust-point { display: flex; align-items: center; justify-content: center; gap: 9px; color: var(--peacock); font-weight: 700; }
+    .trust-point svg { width: 27px; height: 27px; flex: 0 0 auto; color: var(--marigold); }
+
+    /* Products */
+    .products-grid, .why-grid, .steps-grid, .reviews-grid { display: grid; gap: 20px; }
+    .products-grid { grid-template-columns: repeat(3, 1fr); }
+    .product-card { overflow: hidden; border: 1px solid rgba(7,92,112,.2); border-radius: 120px 120px 20px 20px / 76px 76px 20px 20px; background: var(--paper); box-shadow: var(--shadow); text-align: center; }
+    .product-art { display: grid; height: 190px; place-items: center; background: linear-gradient(145deg, #fbefca, #f4d987); }
+    .mini-jar { position: relative; display: grid; width: 92px; height: 115px; place-items: center; border: 4px solid rgba(255,255,255,.8); border-radius: 16px 16px 22px 22px; background: linear-gradient(90deg, #fff2cc, #f0c95e 45%, #e8b63c); box-shadow: 0 12px 16px rgba(102, 69, 21, .16); }
+    .mini-jar::before { position: absolute; top: -13px; width: 52px; height: 13px; border-radius: 4px 4px 2px 2px; background: #a8782b; content: ""; }
+    .mini-jar span { padding: 5px; background: #fff9e9; color: #76501d; font: 700 .67rem var(--serif); }
+    .product-info { padding: 22px; }
+    .product-info h3 { margin: 0; font-size: 1.6rem; }
+    .price { margin: 7px 0 18px; color: #855913; font-weight: 750; }
+    .product-info .button { width: 100%; }
+    .product-card:nth-child(2) .product-art { background: linear-gradient(145deg, #f8edcf, #ebc76c); }
+    .product-card:nth-child(3) .product-art { background: linear-gradient(145deg, #f7e8ba, #e9bd50); }
+
+    /* Why us */
+    .why-section { background: #edf3e6; }
+    .why-grid { grid-template-columns: repeat(4, 1fr); }
+    .why-card { padding: 25px 20px; border: 1px solid rgba(91,61,31,.1); border-radius: 18px; background: rgba(255,253,247,.8); }
+    .icon-circle { display: grid; width: 47px; height: 47px; place-items: center; margin-bottom: 17px; border-radius: 50%; background: #f6e7bf; color: #946217; font-size: 1.3rem; }
+    .why-card h3 { margin: 0 0 7px; font-size: 1.25rem; }
+    .why-card p { margin: 0; color: var(--brown-soft); font-size: .92rem; }
+
+    /* Process */
+    .steps-grid { grid-template-columns: repeat(4, 1fr); counter-reset: step; }
+    .step-card { position: relative; }
+    /* PHOTO PLACEHOLDER: replace each illustrated step panel with a photo of your actual process. */
+    .step-photo { display: grid; height: 160px; place-items: center; border: 1px solid rgba(7,92,112,.2); border-radius: 100px 100px 16px 16px / 62px 62px 16px 16px; background: linear-gradient(145deg, #f4e3b2, #edcf7c); color: #946317; font-size: 2.4rem; }
+    .step-card:nth-child(2) .step-photo { background: linear-gradient(145deg, #f6e9c8, #e6ca8d); }
+    .step-card:nth-child(3) .step-photo { background: linear-gradient(145deg, #f4df9c, #e5ba53); }
+    .step-card:nth-child(4) .step-photo { background: linear-gradient(145deg, #f1e5c7, #dcbf7a); }
+    .step-number { display: inline-grid; width: 28px; height: 28px; place-items: center; margin-top: 15px; border-radius: 50%; background: var(--brown); color: white; font-size: .8rem; font-weight: 700; }
+    .step-card h3 { display: inline-block; margin: 0 0 0 8px; font-size: 1.2rem; }
+    .step-card p { margin: 8px 0 0; color: var(--brown-soft); font-size: .9rem; }
+
+    /* Story */
+    .story-section { background: #f2e8d2; }
+    .story-grid { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: 55px; }
+    /* PHOTO PLACEHOLDER: replace this block with a founder image; keep descriptive alt text. */
+    .founder-placeholder { display: grid; min-height: 330px; place-items: center; border: 1px dashed #b78a3d; border-radius: 150px 150px 24px 24px / 100px 100px 24px 24px; background: linear-gradient(145deg, #f2dda5, #fff5d9); color: #8c641f; text-align: center; }
+    .founder-placeholder span { display: block; font-size: 3rem; }
+    .founder-placeholder small { display: block; font-weight: 700; }
+    .story-copy p { color: var(--brown-soft); }
+    .story-sign { margin-top: 22px; color: #8d5f17; font: italic 1.1rem var(--serif); }
+
+    /* Reviews */
+    .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+    .review-card { padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); box-shadow: 0 10px 28px rgba(89,61,27,.07); }
+    .stars { color: #bd841e; letter-spacing: .12em; }
+    .review-card blockquote { margin: 14px 0 18px; color: var(--brown-soft); }
+    .review-card cite { font-style: normal; font-weight: 750; }
+    .review-card cite small { display: block; color: #8d765b; font-size: .78rem; font-weight: 400; }
+
+    /* FAQ */
+    .faq-section { background: #eaf2ed; }
+    .faq-list { max-width: 780px; margin: auto; }
+    details { border-bottom: 1px solid rgba(91,61,31,.17); }
+    summary { position: relative; padding: 20px 36px 20px 2px; cursor: pointer; font: 700 1.14rem var(--serif); list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { position: absolute; right: 4px; color: #9c6917; content: "+"; font: 400 1.5rem var(--sans); }
+    details[open] summary::after { content: "−"; }
+    details p { margin: 0; padding: 0 28px 20px 2px; color: var(--brown-soft); }
+
+    /* Contact and footer */
+    .contact-section { background: linear-gradient(135deg, #075c70, #542b35); color: #fff9eb; text-align: center; }
+    .contact-section .eyebrow { color: #f0ce7d; }
+    .contact-section h2 { color: #fff8e8; }
+    .contact-section p { color: #f0dfc0; }
+    .contact-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px; margin: 24px 0 12px; }
+    .email-link { color: #ffe3a2; font-weight: 700; text-underline-offset: 4px; }
+    .reply-note { font-size: .9rem; }
+    footer { padding: 27px 0; background: #3e2530; color: #f4e7d4; font-size: .9rem; }
+    .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+    .footer-inner p { margin: 0; }
+    .social-links { display: flex; gap: 16px; }
+    .social-links a { color: #f1d89e; text-decoration: none; }
+    .social-links a:hover { text-decoration: underline; }
+    .fssai { color: #cdb998; }
+    .floating-wa {
+      position: fixed;
+      right: 20px;
+      bottom: max(20px, env(safe-area-inset-bottom));
+      z-index: 20;
+      display: grid;
+      width: 58px;
+      height: 58px;
+      place-items: center;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      background: #087c78;
+      color: white;
+      box-shadow: 0 8px 24px rgba(0,0,0,.22);
+      font-size: .95rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform .2s ease;
+    }
+    .floating-wa:hover { transform: scale(1.07); }
+    .floating-wa svg { width: 29px; height: 29px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+
+    /* MORPANKH LOAD ANIMATION: Remove this block to disable the falling-feather effect. */
+    .morpankh-overlay {
+      position: fixed;
+      z-index: 1000;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .morpankh-feather {
+      position: absolute;
+      top: -22vh;
+      width: var(--feather-width);
+      height: auto;
+      opacity: 0;
+      will-change: transform, opacity;
+      animation: morpankh-fall var(--fall-duration) cubic-bezier(.36,.04,.62,.99) var(--fall-delay) forwards;
+    }
+    @keyframes morpankh-fall {
+      0% { opacity: 0; transform: translate3d(0, -4vh, 0) rotate(-16deg); }
+      9% { opacity: .88; }
+      28% { transform: translate3d(var(--sway), 27vh, 0) rotate(13deg); }
+      52% { transform: translate3d(calc(var(--sway) * -.55), 56vh, 0) rotate(-11deg); }
+      76% { opacity: .72; transform: translate3d(var(--sway), 84vh, 0) rotate(15deg); }
+      100% { opacity: 0; transform: translate3d(0, 112vh, 0) rotate(-12deg); }
+    }
+
+    @media (max-width: 850px) {
+      .header-inner { position: relative; }
+      .menu-toggle { display: inline-grid; place-items: center; order: 3; }
+      .header-cta { margin-left: auto; }
+      .nav {
+        position: absolute;
+        top: calc(100% + 1px);
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 20px 16px;
+        border-bottom: 1px solid var(--line);
+        background: var(--cream);
+        box-shadow: 0 12px 18px rgba(89,61,27,.08);
+      }
+      .nav.is-open { display: flex; }
+      .nav a { padding: 10px 2px; }
+      .hero-grid { gap: 20px; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps-grid { grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
+      .trust-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .wrap { width: min(100% - 32px, 480px); }
+      section { padding: 64px 0; }
+      .header-inner { min-height: 68px; gap: 6px; }
+      .brand { gap: 7px; }
+      .brand-mark { width: 36px; height: 36px; }
+      .brand-name { font-size: .85rem; }
+      .header-cta { min-height: 40px; padding: 8px 10px; font-size: .71rem; }
+      .menu-toggle { padding: 4px; }
+      .hero { padding: 58px 0 60px; }
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero h1 { margin-inline: auto; font-size: clamp(2.05rem, 9.5vw, 3.5rem); }
+      .hero-copy { margin-inline: auto; font-size: 1rem; }
+      .hero-note { justify-content: center; }
+      .hero-visual { min-height: 300px; margin-top: 4px; }
+      .sun-disc { width: 255px; }
+      .jar-art { transform: scale(.84); }
+      .hero-stamp { right: 1%; bottom: 7%; width: 77px; height: 77px; font-size: .68rem; }
+      .products-grid, .reviews-grid { grid-template-columns: 1fr; }
+      .product-card { max-width: 390px; width: 100%; margin-inline: auto; }
+      .why-grid { gap: 12px; }
+      .why-card { padding: 19px 15px; }
+      .trust-point { gap: 6px; font-size: .9rem; }
+      .trust-point svg { width: 23px; height: 23px; }
+      .steps-grid { gap: 20px 14px; }
+      .step-photo { height: 125px; }
+      .step-card h3 { font-size: 1.03rem; }
+      .story-grid { grid-template-columns: 1fr; gap: 28px; }
+      .founder-placeholder { min-height: 260px; }
+      .footer-inner { justify-content: center; text-align: center; }
+      .floating-wa { right: 15px; width: 54px; height: 54px; }
+    }
+    @media (max-width: 360px) {
+      .wrap { width: calc(100% - 24px); }
+      .header-inner { flex-wrap: wrap; padding-block: 8px; }
+      .brand-mark { width: 32px; height: 32px; }
+      .brand-name { font-size: .74rem; }
+      .header-cta { order: 2; width: 100%; min-height: 38px; margin-left: 0; padding: 7px 7px; font-size: .72rem; }
+      .menu-toggle { order: 1; margin-left: auto; font-size: 1.35rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+      .morpankh-overlay { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#home" aria-label="Gauriganesh Ghee home">
+        <span class="brand-mark" aria-hidden="true">G</span>
+        <span class="brand-copy"><span class="brand-name">Gauriganesh Ghee</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
+      <nav class="nav" id="primary-nav" aria-label="Main navigation">
+        <a href="#products">Products</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#story">Our Story</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="button header-cta" href="https://wa.me/917839512687?text=Hi%2C%20I%20want%20to%20order%20Gauriganesh%20Ghee." target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <h1>गौरीगणेश का<br><span>शुद्ध देसी घी</span></h1>
+          <p class="hero-copy">Pure, traditionally made ghee, prepared with care and packed fresh for your family.</p>
+          <a class="button" href="https://wa.me/917839512687?text=Hi%2C%20I%20want%20to%20order%20Gauriganesh%20Ghee." target="_blank" rel="noopener noreferrer">Order on WhatsApp <span aria-hidden="true">→</span></a>
+          <div class="hero-note">Available in 250 g, 500 g and 1 kg jars</div>
+        </div>
+        <div class="hero-visual" role="img" aria-label="Illustration placeholder of a Gauriganesh Ghee jar">
+          <div class="sun-disc" aria-hidden="true"></div>
+          <div class="jar-art" aria-hidden="true">
+            <div class="jar-lid"></div><div class="jar-neck"></div>
+            <div class="jar-body"><div class="jar-label"><strong>Gauriganesh</strong><small>Pure Ghee</small></div></div>
+            <div class="jar-ghee"></div>
+          </div>
+          <div class="hero-stamp" aria-hidden="true">MADE WITH<br>CARE ✦</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip wrap" aria-label="Four reasons to trust our ghee">
+      <div class="trust-point"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m16 3 11 5v8c0 7-5 11-11 13C10 27 5 23 5 16V8z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m11 16 3 3 7-7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>Purity</div>
+      <div class="trust-point"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 27S4 20 7 10c2-6 7-5 9 0 2-5 7-6 9 0 3 10-9 17-9 17Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 24V10" stroke="currentColor" stroke-width="2"/></svg>Tradition</div>
+      <div class="trust-point"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4c4 6 9 10 9 16a9 9 0 0 1-18 0c0-6 5-10 9-16Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 21c1 2 3 3 5 3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg>Freshness</div>
+      <div class="trust-point"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m16 3 11 5v8c0 7-5 11-11 13C10 27 5 23 5 16V8z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m11 21 10-10m-9 0 10 10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg>No additives</div>
+    </div>
+    <div class="yamuna-divider" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0 15C120 43 240 43 360 15S600-13 720 15s240 28 360 0 240-28 360 0M0 28c120 24 240 24 360 0s240-24 360 0 240 24 360 0 240-24 360 0"/></svg></div>
+
+    <section id="products">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Choose your jar</p>
+          <h2>Our Products</h2>
+          <div class="section-ornament" aria-hidden="true"><svg viewBox="0 0 48 36"><path d="M24 33C22 23 12 21 12 13c0-5 5-8 12 0 7-8 12-5 12 0 0 8-10 10-12 20ZM24 31V11" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 28h24" stroke="currentColor" stroke-width="2"/></svg></div>
+          <p class="section-intro">Choose the size that suits your kitchen. Message us on WhatsApp to place an order.</p>
+        </div>
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="product-art" aria-hidden="true"><div class="mini-jar"><span>PURE<br>GHEE</span></div></div>
+            <div class="product-info">
+              <h3>250 g</h3>
+              <!-- PRICE PLACEHOLDER: replace ₹___ with your confirmed price. -->
+              <p class="price">Price: ₹___</p>
+                  <a class="button" href="https://wa.me/917839512687?text=Hi%2C%20I%20want%20to%20order%20Gauriganesh%20Ghee%20-%20250%20g." target="_blank" rel="noopener noreferrer">Order 250 g on WhatsApp</a>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-art" aria-hidden="true"><div class="mini-jar"><span>PURE<br>GHEE</span></div></div>
+            <div class="product-info">
+              <h3>500 g</h3>
+              <!-- PRICE PLACEHOLDER: replace ₹___ with your confirmed price. -->
+              <p class="price">Price: ₹___</p>
+              <a class="button" href="https://wa.me/917839512687?text=Hi%2C%20I%20want%20to%20order%20Gauriganesh%20Ghee%20-%20500%20g." target="_blank" rel="noopener noreferrer">Order 500 g on WhatsApp</a>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-art" aria-hidden="true"><div class="mini-jar"><span>PURE<br>GHEE</span></div></div>
+            <div class="product-info">
+              <h3>1 kg</h3>
+              <!-- PRICE PLACEHOLDER: replace ₹___ with your confirmed price. -->
+              <p class="price">Price: ₹___</p>
+              <a class="button" href="https://wa.me/917839512687?text=Hi%2C%20I%20want%20to%20order%20Gauriganesh%20Ghee%20-%201%20kg." target="_blank" rel="noopener noreferrer">Order 1 kg on WhatsApp</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="yamuna-divider" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0 15C120 43 240 43 360 15S600-13 720 15s240 28 360 0 240-28 360 0M0 28c120 24 240 24 360 0s240-24 360 0 240 24 360 0 240-24 360 0"/></svg></div>
+    <section class="why-section" id="why-us">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Our promise</p>
+          <h2>Why Choose Gauriganesh Ghee</h2>
+        </div>
+        <div class="why-grid">
+          <article class="why-card"><div class="icon-circle" aria-hidden="true">✦</div><h3>Pure</h3><p>Made with care for a comforting staple in your everyday meals.</p></article>
+          <article class="why-card"><div class="icon-circle" aria-hidden="true">♨</div><h3>Traditional method</h3><p>Prepared with a traditional approach that honours the familiar taste of home.</p></article>
+          <article class="why-card"><div class="icon-circle" aria-hidden="true">♡</div><h3>No additives</h3><p>No additives are added to our ghee.</p></article>
+          <article class="why-card"><div class="icon-circle" aria-hidden="true">❋</div><h3>Fresh & carefully packed</h3><p>Each jar is carefully packed to help it reach your kitchen in good condition.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <div class="yamuna-divider" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0 15C120 43 240 43 360 15S600-13 720 15s240 28 360 0 240-28 360 0M0 28c120 24 240 24 360 0s240-24 360 0 240 24 360 0 240-24 360 0"/></svg></div>
+    <section id="process">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">From our kitchen</p>
+          <h2>How It's Made</h2>
+          <p class="section-intro">A simple, careful process brings every jar from preparation to your home.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card"><div class="step-photo" role="img" aria-label="Placeholder illustration for selecting ingredients">🌾</div><span class="step-number">1</span><h3>Choose with care</h3><p>We begin with ingredients selected for making ghee.</p></article>
+          <article class="step-card"><div class="step-photo" role="img" aria-label="Placeholder illustration for traditional preparation">♨</div><span class="step-number">2</span><h3>Prepare traditionally</h3><p>Our ghee is prepared using a traditional method.</p></article>
+          <article class="step-card"><div class="step-photo" role="img" aria-label="Placeholder illustration for careful checking">✧</div><span class="step-number">3</span><h3>Check each batch</h3><p>We take care as each batch is prepared and handled.</p></article>
+          <article class="step-card"><div class="step-photo" role="img" aria-label="Placeholder illustration for packing a jar">▣</div><span class="step-number">4</span><h3>Pack with care</h3><p>Then it is carefully packed in jars, ready for your table.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <div class="yamuna-divider" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0 15C120 43 240 43 360 15S600-13 720 15s240 28 360 0 240-28 360 0M0 28c120 24 240 24 360 0s240-24 360 0 240 24 360 0 240-24 360 0"/></svg></div>
+    <section class="story-section" id="story">
+      <div class="wrap story-grid">
+        <div class="founder-placeholder" role="img" aria-label="Founder photo placeholder">
+          <div><span aria-hidden="true">📷</span><small>Founder photo placeholder</small></div>
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow">Our story</p>
+          <h2>Our Story</h2>
+          <!-- STORY PLACEHOLDER: replace this paragraph with your real founder and business story. -->
+          <p>Gauriganesh Ghee began with a simple wish: to share the warmth and familiar taste of traditionally made ghee with more families. We make every jar with care, taking pride in the small details from preparation to packing.</p>
+          <p>We'd love for our ghee to find a place in your everyday cooking and special family moments.</p>
+          <div class="story-sign">With care, the Gauriganesh Ghee family</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="yamuna-divider" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0 15C120 43 240 43 360 15S600-13 720 15s240 28 360 0 240-28 360 0M0 28c120 24 240 24 360 0s240-24 360 0 240 24 360 0 240-24 360 0"/></svg></div>
+    <section id="reviews">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Kind words</p>
+          <h2>Customer Reviews</h2>
+          <p class="section-intro">We'd love to hear what you think. These spaces are ready for genuine customer feedback.</p>
+        </div>
+        <div class="reviews-grid">
+          <!-- REVIEW PLACEHOLDER: replace with a real review and get permission before publishing it. -->
+          <article class="review-card"><div class="stars" aria-label="Rating placeholder">★★★★★</div><blockquote>“Add a real customer review here.”</blockquote><cite>Customer name<small>Review placeholder</small></cite></article>
+          <!-- REVIEW PLACEHOLDER: replace with a real review and get permission before publishing it. -->
+          <article class="review-card"><div class="stars" aria-label="Rating placeholder">★★★★★</div><blockquote>“Add a real customer review here.”</blockquote><cite>Customer name<small>Review placeholder</small></cite></article>
+          <!-- REVIEW PLACEHOLDER: replace with a real review and get permission before publishing it. -->
+          <article class="review-card"><div class="stars" aria-label="Rating placeholder">★★★★★</div><blockquote>“Add a real customer review here.”</blockquote><cite>Customer name<small>Review placeholder</small></cite></article>
+        </div>
+      </div>
+    </section>
+
+    <div class="yamuna-divider" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0 15C120 43 240 43 360 15S600-13 720 15s240 28 360 0 240-28 360 0M0 28c120 24 240 24 360 0s240-24 360 0 240 24 360 0 240-24 360 0"/></svg></div>
+    <section class="faq-section" id="faq">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Good to know</p>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list">
+          <details><summary>What is the shelf life of the ghee?</summary><p>Please check the best-before date printed on the jar. For product-specific shelf-life information, message us on WhatsApp.</p></details>
+          <details><summary>How should I store the ghee?</summary><p>Keep the jar tightly closed and store it in a cool, dry place. Always use a clean, dry spoon.</p></details>
+          <details><summary>Which areas do you deliver to?</summary><p>Delivery availability depends on your location. Send us your area or PIN code on WhatsApp and we'll confirm.</p></details>
+          <details><summary>How do I place an order?</summary><p>Tap any “Order on WhatsApp” button, tell us the jar size and quantity, and we'll reply with the next steps.</p></details>
+          <details><summary>How can I pay?</summary><p>We'll confirm the available payment options directly with you when you place your order on WhatsApp. Payment is arranged with us directly; this website does not take online payments.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <div class="yamuna-divider" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0 15C120 43 240 43 360 15S600-13 720 15s240 28 360 0 240-28 360 0M0 28c120 24 240 24 360 0s240-24 360 0 240 24 360 0 240-24 360 0"/></svg></div>
+    <section class="contact-section" id="contact">
+      <div class="wrap">
+        <p class="eyebrow">Let's get in touch</p>
+        <h2>Contact</h2>
+        <p>Message us to order or ask us anything about Gauriganesh Ghee.</p>
+        <div class="contact-actions">
+          <a class="button" href="https://wa.me/917839512687?text=Hi%2C%20I%20want%20to%20order%20Gauriganesh%20Ghee." target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          <a class="button button--outline" href="mailto:adityayadav792007@gmail.com">Email us</a>
+        </div>
+        <p class="reply-note">We reply on WhatsApp and email</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> Gauriganesh Ghee. All rights reserved.</p>
+      <!-- SOCIAL PLACEHOLDERS: replace # with your real social profile URLs, or remove links you don't use. -->
+      <div class="social-links" aria-label="Social media">
+        <a href="#" aria-label="Instagram placeholder">Instagram</a>
+        <a href="#" aria-label="Facebook placeholder">Facebook</a>
+      </div>
+      <!-- FSSAI PLACEHOLDER: replace this text with your valid licence number, if applicable. -->
+      <p class="fssai">FSSAI Licence No.: [Add your licence number]</p>
+    </div>
+  </footer>
+
+  <a class="floating-wa" href="https://wa.me/917839512687?text=Hi%2C%20I%20want%20to%20order%20Gauriganesh%20Ghee." target="_blank" rel="noopener noreferrer" aria-label="Order Gauriganesh Ghee on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4a11 11 0 0 0-9.4 16.7L5 27l6.5-1.6A11 11 0 1 0 16 4Z"/><path d="M12 11c-.5-.8-1-1-1.5-.5-.7.6-1.3 1.4-.7 2.8 1 2.5 3.2 4.7 5.7 5.8 1.4.6 2.2 0 2.8-.7.5-.5.3-1-.5-1.5l-1.5-.8-1.1 1.1a9 9 0 0 1-3.5-3.5l1.1-1.1Z"/></svg></a>
+  <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector("#primary-nav");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      menuButton.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
+      navigation.classList.toggle("is-open", !isOpen);
+    });
+
+    navigation.addEventListener("click", (event) => {
+      if (event.target instanceof HTMLAnchorElement) {
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open menu");
+        navigation.classList.remove("is-open");
+      }
+    });
+
+    document.querySelector("#year").textContent = new Date().getFullYear();
+
+    /* MORPANKH LOAD ANIMATION: Inline SVG feathers play once, then the overlay is removed. */
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const featherOverlay = document.createElement("div");
+      featherOverlay.className = "morpankh-overlay";
+      featherOverlay.setAttribute("aria-hidden", "true");
+
+      const featherSvg = `
+        <svg viewBox="0 0 80 190" role="presentation">
+          <path d="M40 5C18 23 10 54 17 86c5 24 16 53 23 99 7-46 18-75 23-99C70 54 62 23 40 5Z" fill="#087c78"/>
+          <path d="M40 14C24 31 18 55 23 81c4 20 11 41 17 73 6-32 13-53 17-73 5-26-1-50-17-67Z" fill="#168f89"/>
+          <path d="M40 174C39 123 40 71 40 18M39 121 24 91m17 14 17-28M39 93 25 65m17 9 14-22m-16 17L31 49m10 7 11-18" fill="none" stroke="#f1d77d" stroke-linecap="round" stroke-width="2"/>
+          <ellipse cx="40" cy="48" rx="13" ry="19" fill="#d39a21"/>
+          <ellipse cx="40" cy="48" rx="8" ry="13" fill="#075c70"/>
+          <ellipse cx="40" cy="48" rx="3" ry="7" fill="#f1d77d"/>
+        </svg>`;
+      const feathers = [
+        { left: "3%", width: "48px", delay: "0s", duration: "5s", sway: "24px" },
+        { left: "17%", width: "62px", delay: ".16s", duration: "5.25s", sway: "-34px" },
+        { left: "34%", width: "45px", delay: ".32s", duration: "4.9s", sway: "28px" },
+        { left: "59%", width: "60px", delay: ".08s", duration: "5.4s", sway: "-30px" },
+        { left: "78%", width: "50px", delay: ".24s", duration: "5.1s", sway: "35px" },
+        { left: "92%", width: "42px", delay: ".4s", duration: "5.2s", sway: "-22px" }
+      ];
+
+      let completedFeathers = 0;
+      const removeFeatherOverlay = () => featherOverlay.remove();
+      feathers.forEach((feather) => {
+        const element = document.createElement("div");
+        element.className = "morpankh-feather";
+        element.innerHTML = featherSvg;
+        element.style.left = feather.left;
+        element.style.setProperty("--feather-width", feather.width);
+        element.style.setProperty("--fall-delay", feather.delay);
+        element.style.setProperty("--fall-duration", feather.duration);
+        element.style.setProperty("--sway", feather.sway);
+        element.addEventListener("animationend", () => {
+          completedFeathers += 1;
+          if (completedFeathers === feathers.length) removeFeatherOverlay();
+        }, { once: true });
+        featherOverlay.append(element);
+      });
+
+      document.body.append(featherOverlay);
+      window.setTimeout(removeFeatherOverlay, 6200);
+    }
+  </script>
+</body>
+</html>
