@@ -3,658 +3,1203 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8f2df">
-  <meta name="description" content="Gauriganesh Ghee — pure desi ghee, traditionally made and carefully packed. Available in 250 g, 500 g and 1 kg jars. Order on WhatsApp.">
-  <title>Gauriganesh Ghee | Pure Desi Ghee</title>
+  <meta name="theme-color" content="#f8f2e7">
+  <meta name="description" id="meta-description" content="Discover Gauriganesh Ghee. Explore our ghee, learn about the traditional Bilona journey, and get in touch directly on WhatsApp or email.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" id="og-title" content="Gauriganesh Ghee – Pure Bilona Ghee">
+  <meta property="og:description" id="og-description" content="Tradition in every spoon, purity in every jar. Learn about Gauriganesh Ghee and contact us directly.">
+  <meta property="og:url" id="og-url" content="">
+  <meta property="og:image" content="images/Gauri_Ganesh_Pure_Desi_Ghee.png">
+  <meta property="og:image:alt" content="Gauri Ganesh Pure Desi Ghee – cow and calf in Vrindavan">
+  <meta name="twitter:card" content="summary">
+  <title>गौरी गणेश शुद्ध देसी घी | Gauriganesh Ghee</title>
+  <link rel="icon" id="favicon" type="image/png" href="images/Gauri_Ganesh_Pure_Desi_Ghee.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       color-scheme: light;
-      --cream: #f8f2df;
-      --paper: #fffdf4;
-      --gold: #d39a21;
-      --gold-light: #f1d77d;
-      --brown: #542b35;
-      --brown-soft: #685252;
-      --green: #087c78;
-      --peacock: #075c70;
-      --teal: #168f89;
-      --marigold: #e7a526;
-      --line: rgba(65, 53, 48, .15);
-      --shadow: 0 16px 42px rgba(61, 54, 42, .11);
-      --serif: Georgia, "Times New Roman", serif;
-      --sans: "Segoe UI", Arial, sans-serif;
+      --cream: #f8f2e7;
+      --cream-deep: #eee2cc;
+      --paper: #fffdf8;
+      --green: #164b3b;
+      --green-deep: #10392e;
+      --green-soft: #e7efe8;
+      --maroon: #572d36;
+      --gold: #c59a47;
+      --gold-light: #ead9ad;
+      --ink: #292720;
+      --muted: #716b60;
+      --line: rgba(57, 48, 34, .15);
+      --shadow: 0 16px 42px rgba(49, 39, 25, .09);
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", "Segoe UI", Arial, sans-serif;
+      --hindi-serif: "Noto Serif Devanagari", Georgia, serif;
+      --hindi-sans: "Noto Sans Devanagari", "Noto Sans", sans-serif;
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    html { overflow-x: clip; scroll-behavior: smooth; scroll-padding-top: 92px; }
     body {
       margin: 0;
-      background-color: var(--cream);
-      background-image:
-        radial-gradient(circle at 12px 12px, rgba(7, 92, 112, .035) 1.2px, transparent 1.6px),
-        radial-gradient(circle at 0 0, transparent 10px, rgba(7, 92, 112, .025) 10.5px, transparent 11px);
-      background-size: 24px 24px, 24px 24px;
-      color: var(--brown);
-      font-family: var(--sans);
-      line-height: 1.65;
+      background: var(--cream);
+      color: var(--ink);
+      font: 400 1rem/1.65 var(--sans);
     }
+    body.menu-open { overflow: hidden; }
     a { color: inherit; }
-    img { max-width: 100%; }
+    button, input, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    svg { display: block; }
     .wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      top: 8px;
+      left: 8px;
+      padding: 10px 14px;
+      border-radius: 6px;
+      background: var(--green-deep);
+      color: white;
+      transform: translateY(-160%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+    :focus-visible { outline: 3px solid #986d21; outline-offset: 3px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: var(--serif); line-height: 1.16; }
+    h2 { margin-bottom: 12px; font-size: clamp(2rem, 4vw, 3.1rem); }
+    h3 { margin-bottom: 8px; }
     .eyebrow {
-      margin: 0 0 10px;
-      color: #a56a12;
-      font-size: .76rem;
-      font-weight: 800;
-      letter-spacing: .04em;
+      margin-bottom: 11px;
+      color: var(--green);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
     }
-    h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
-    h2 { margin: 0 0 14px; font-size: clamp(2rem, 4vw, 3rem); }
-    .section-intro { max-width: 620px; margin: 0 auto 38px; color: var(--brown-soft); }
-    section { position: relative; padding: 82px 0; }
-    section:not(.hero)::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      height: 15px;
-      background:
-        radial-gradient(circle at 6px 6px, var(--marigold) 0 3px, transparent 3.8px) 0 0 / 24px 12px repeat-x,
-        radial-gradient(ellipse at 18px 10px, #438879 0 2px, transparent 2.8px) 0 0 / 24px 12px repeat-x;
-      content: "";
-      opacity: .8;
-      pointer-events: none;
-    }
-    .yamuna-divider {
-      height: 30px;
-      overflow: hidden;
-      background: linear-gradient(180deg, rgba(22,143,137,.05), rgba(7,92,112,.09));
-    }
-    .yamuna-divider svg { display: block; width: 100%; height: 100%; }
-    .yamuna-divider path { fill: none; stroke: #168f89; stroke-linecap: round; stroke-width: 2; opacity: .5; }
-    .section-ornament { display: flex; justify-content: center; margin: -14px auto 22px; color: var(--marigold); }
-    .section-ornament svg { width: 42px; height: 34px; }
-    .section-heading { margin: 0 auto 42px; max-width: 680px; text-align: center; }
+    .section-heading { max-width: 700px; margin: 0 auto 38px; text-align: center; }
+    .section-heading p:last-child { margin-bottom: 0; }
+    .section-copy { color: var(--muted); }
+    .gold-rule { width: 58px; height: 2px; margin: 18px auto; background: var(--gold); }
     .button {
       display: inline-flex;
       min-height: 48px;
       align-items: center;
       justify-content: center;
       gap: 9px;
-      border: 0;
+      border: 1px solid transparent;
       border-radius: 999px;
-      padding: 12px 22px;
+      padding: 12px 21px;
       background: var(--green);
       color: #fff;
-      font: 700 .94rem var(--sans);
+      font-size: .94rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
       text-decoration: none;
-      box-shadow: 0 8px 18px rgba(8, 124, 120, .18);
-      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
     }
-    .button:hover { background: #05645f; box-shadow: 0 11px 22px rgba(8, 124, 120, .24); transform: translateY(-2px); }
-    .button:focus-visible, a:focus-visible, summary:focus-visible, button:focus-visible {
-      outline: 3px solid #bd7d15;
-      outline-offset: 4px;
+    .button:hover { background: var(--green-deep); box-shadow: 0 8px 18px rgba(22,75,59,.18); transform: translateY(-2px); }
+    .button--outline { border-color: rgba(255,255,255,.55); background: transparent; box-shadow: none; }
+    .button--outline:hover { background: rgba(255,255,255,.1); }
+    .button--small { min-height: 43px; padding: 10px 17px; font-size: .87rem; }
+    .icon {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 auto;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.65;
     }
-    .button--outline { border: 1px solid rgba(255,255,255,.55); background: transparent; box-shadow: none; }
-    .button--outline:hover { background: rgba(255,255,255,.12); }
-
-    /* Header */
+    .announcement {
+      position: relative;
+      padding: 8px 42px;
+      background: var(--green-deep);
+      color: #fff9ec;
+      font-size: .83rem;
+      text-align: center;
+      letter-spacing: .02em;
+    }
+    .announcement-close {
+      position: absolute;
+      top: 50%;
+      right: max(14px, calc((100vw - 1120px) / 2));
+      display: grid;
+      width: 30px;
+      height: 30px;
+      place-items: center;
+      border: 0;
+      background: transparent;
+      color: white;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transform: translateY(-50%);
+    }
     .site-header {
       position: sticky;
-      z-index: 10;
+      z-index: 30;
       top: 0;
-      background: rgba(248, 242, 223, .95);
       border-bottom: 1px solid var(--line);
+      background: rgba(248,242,231,.96);
       backdrop-filter: blur(12px);
     }
-    .header-inner { display: flex; min-height: 76px; align-items: center; justify-content: space-between; gap: 20px; }
+    .header-inner { display: flex; min-height: 76px; align-items: center; justify-content: space-between; gap: 18px; }
     .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; white-space: nowrap; }
-    .brand-mark {
-      display: grid;
-      width: 40px;
-      height: 40px;
+    .brand-mark { width: 44px; height: 44px; flex: 0 0 auto; border: 2px solid var(--gold); border-radius: 50%; object-fit: cover; }
+    .brand-copy { display: flex; flex-direction: column; line-height: 1.35; }
+    .brand-name { color: var(--green-deep); font: 700 1.03rem/1.35 var(--hindi-serif); }
+    .brand-english { color: var(--muted); font-size: .68rem; font-weight: 600; }
+    .nav { display: flex; align-items: center; gap: clamp(12px, 1.7vw, 24px); }
+    .nav a { color: #4e4b42; font-size: .87rem; font-weight: 600; text-decoration: none; }
+    .nav a:hover, .footer-links a:hover { color: var(--gold); }
+    .header-actions { display: flex; align-items: center; gap: 10px; }
+    .menu-toggle {
+      display: none;
+      width: 43px;
+      height: 43px;
       place-items: center;
-      border: 1px solid #e8c66f;
+      border: 1px solid var(--line);
       border-radius: 50%;
-      background: #f8e9be;
-      color: var(--peacock);
-      font: 700 1.1rem var(--serif);
+      background: transparent;
+      color: var(--green-deep);
+      font-size: 1.25rem;
+      cursor: pointer;
     }
-    .brand-copy { display: flex; flex-direction: column; line-height: 1.12; }
-    .brand-name { font: 700 1.12rem var(--serif); letter-spacing: -.02em; }
-    .nav { display: flex; align-items: center; gap: clamp(14px, 2vw, 28px); }
-    .nav a { color: var(--brown-soft); font-size: .9rem; font-weight: 650; text-decoration: none; }
-    .nav a:hover { color: var(--teal); }
-    .header-cta { min-height: 43px; padding: 10px 17px; font-size: .86rem; white-space: nowrap; }
-    .menu-toggle { display: none; border: 0; background: transparent; color: var(--brown); font-size: 1.55rem; cursor: pointer; }
 
-    /* Hero */
     .hero {
       position: relative;
       overflow: hidden;
-      padding: 80px 0 86px;
+      min-height: 560px;
+      display: grid;
+      align-items: center;
+      padding: 92px 0 102px;
       background:
-        radial-gradient(ellipse at 83% 42%, rgba(255, 190, 71, .35), transparent 34%),
-        radial-gradient(ellipse at 7% 84%, rgba(22, 143, 137, .13), transparent 34%),
-        linear-gradient(120deg, #fff5d8 0%, #f9e3ad 48%, #f8f2df 100%);
+        radial-gradient(ellipse at 80% 47%, rgba(198,154,71,.25), transparent 34%),
+        radial-gradient(ellipse at 13% 88%, rgba(22,75,59,.09), transparent 32%),
+        linear-gradient(132deg, #fffaf0, #f3e7d0 54%, #f8f2e7);
     }
-    .hero::after {
+    .hero::before, .hero::after {
       position: absolute;
-      right: -100px;
-      bottom: -240px;
-      width: 490px;
-      height: 490px;
-      border: 1px solid rgba(7, 92, 112, .14);
+      border: 1px solid rgba(197,154,71,.27);
       border-radius: 50%;
       content: "";
       pointer-events: none;
     }
-    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 48px; }
-    .hero h1 {
-      max-width: 620px;
-      margin: 0 0 18px;
-      color: var(--brown);
-      font: 700 clamp(2.8rem, 6vw, 5rem)/1.2 "Tiro Devanagari Hindi", "Noto Serif Devanagari", Georgia, serif;
+    .hero::before { top: -190px; right: -120px; width: 570px; height: 570px; }
+    .hero::after { top: -126px; right: -56px; width: 440px; height: 440px; }
+    .hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 24px; }
+    .hero-content { position: relative; z-index: 2; max-width: 650px; }
+    .hero h1 { max-width: 670px; margin-bottom: 12px; color: var(--green-deep); font: 700 clamp(2.65rem, 6vw, 4.7rem)/1.4 var(--hindi-serif); letter-spacing: 0; overflow-wrap: anywhere; }
+    .hero h1 .hero-title-english { display: block; margin-top: 6px; color: var(--maroon); font: 600 clamp(1.05rem, 2.2vw, 1.5rem)/1.45 var(--serif); letter-spacing: 0; }
+    .hero-copy { max-width: 630px; margin-bottom: 26px; color: #5e594f; font: 500 1rem/1.6 var(--hindi-sans); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero .button--outline { border-color: var(--green); color: var(--green); }
+    .hero .button--outline:hover { background: rgba(22,75,59,.08); }
+    .hero-logo-wrap { display: grid; min-width: 0; place-items: center; }
+    .hero-logo-image { display: block; width: min(100%, 470px); aspect-ratio: 1; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 16px rgba(255,249,230,.38), 0 22px 65px rgba(139,94,29,.28); animation: hero-logo-float 6s ease-in-out infinite; }
+    @keyframes hero-logo-float { 50% { transform: translateY(-9px); } }
+
+    .trust-strip { overflow: hidden; border-block: 1px solid var(--gold-light); background: var(--paper); }
+    .marquee { display: flex; width: max-content; animation: marquee-scroll 32s linear infinite; }
+    .marquee-group { display: flex; align-items: center; }
+    .marquee-item { display: inline-flex; align-items: center; gap: 13px; padding: 17px 26px; color: var(--green); font-size: .83rem; font-weight: 700; white-space: nowrap; }
+    .marquee-item::after { color: var(--gold); content: "✦"; font-size: .78rem; }
+    .trust-strip:hover .marquee { animation-play-state: paused; }
+    @keyframes marquee-scroll { to { transform: translateX(-50%); } }
+
+    section { position: relative; padding: 86px 0; }
+    #our-ghee {
+      background-color: #F7F0DC;
+      background-image: radial-gradient(rgba(169,114,43,.12) .8px, transparent .8px);
+      background-size: 15px 15px;
     }
-    .hero h1 span { color: var(--green); }
-    .hero-copy { max-width: 520px; margin: 0 0 19px; color: var(--brown-soft); font-size: 1.1rem; }
-    .hero-note { display: flex; align-items: center; gap: 9px; margin-top: 18px; color: #776046; font-size: .86rem; }
-    .hero-note::before { color: #c28a24; content: "✦"; }
-    .hero-visual { position: relative; display: grid; min-height: 390px; place-items: center; }
-    .sun-disc { position: absolute; width: min(340px, 80%); aspect-ratio: 1; border-radius: 50%; background: linear-gradient(145deg, #f7d96c, #f0ad37); box-shadow: inset 0 0 0 18px rgba(255,255,255,.2), 0 0 70px rgba(224,149,35,.17); }
-    /* PHOTO PLACEHOLDER: replace the illustrated jar below with a real product photograph if available. */
-    .jar-art { position: relative; z-index: 1; display: flex; width: 220px; height: 278px; align-items: center; flex-direction: column; filter: drop-shadow(0 22px 18px rgba(91, 58, 18, .2)); }
-    .jar-lid { width: 110px; height: 29px; border: 3px solid #926214; border-radius: 8px 8px 4px 4px; background: linear-gradient(#d09a38, #ad741d); }
-    .jar-neck { width: 96px; height: 20px; border-inline: 5px solid rgba(255,255,255,.55); background: #f7ddb0; }
-    .jar-body {
+    .products-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); justify-items: center; gap: 24px; }
+    .product-card {
+      display: flex;
+      width: 100%;
+      max-width: 340px;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid rgba(169,114,43,.2);
+      border-radius: 28px;
+      background: #fffdf7;
+      box-shadow: 0 12px 30px rgba(75,54,24,.1);
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .product-card:hover { box-shadow: 0 18px 38px rgba(75,54,24,.16); transform: translateY(-4px); }
+    .product-art {
       display: grid;
-      width: 190px;
-      height: 220px;
+      min-height: 224px;
       place-items: center;
-      border: 5px solid rgba(255,255,255,.64);
-      border-radius: 28px 28px 38px 38px;
-      background: linear-gradient(90deg, rgba(255,255,255,.45), rgba(255,255,255,.08) 30%, rgba(255,255,255,.38)), #f7e4bd;
+      overflow: hidden;
+      border-radius: 50% 50% 0 0 / 32% 32% 0 0;
+      background: linear-gradient(var(--arch-angle, 135deg), #F7E7B0, #E8B84A);
     }
-    .jar-label { width: 145px; padding: 17px 8px; border: 1px solid #d5ad58; background: #fff8e6; text-align: center; }
-    .jar-label strong { display: block; font: 700 1.12rem var(--serif); }
-    .jar-label small { color: #84602b; font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; }
-    .jar-ghee { width: 100%; height: 38px; border-radius: 0 0 30px 30px; background: linear-gradient(#edc24f, #d99a21); }
-    .hero-stamp { position: absolute; right: 3%; bottom: 11%; z-index: 2; display: grid; width: 95px; height: 95px; place-items: center; border: 1px dashed #9d6e20; border-radius: 50%; background: var(--paper); color: #79500f; font: 700 .78rem var(--serif); text-align: center; transform: rotate(9deg); }
+    .product-jar { width: 136px; height: 154px; filter: drop-shadow(0 8px 7px rgba(88,57,15,.2)); transition: transform .28s ease; }
+    .product-card:hover .product-jar { transform: translateY(-5px); }
+    .product-details { display: flex; flex: 1; flex-direction: column; align-items: center; padding: 22px 22px 25px; }
+    .product-card h3 { margin: 0 0 5px; color: #572d36; font-size: clamp(1.7rem, 3vw, 2rem); text-align: center; }
+    .product-price { margin: 0 0 17px; color: #8A5A1D; font-size: 1.15rem; font-weight: 800; text-align: center; }
+    .product-card .button {
+      width: 100%;
+      margin-top: auto;
+      border: 0;
+      background: #0A7E7A;
+      box-shadow: 0 5px 12px rgba(10,126,122,.2);
+      color: #fff;
+    }
+    .product-card .button:hover { background: #086c69; box-shadow: 0 9px 17px rgba(10,126,122,.26); }
+    .stats-section { padding: 47px 0; background: var(--green); color: white; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; text-align: center; }
+    .stat { padding: 8px 10px; }
+    .stat-number { display: block; margin-bottom: 4px; color: #f1d89e; font: 600 clamp(1.7rem, 4vw, 2.55rem)/1.2 var(--serif); }
+    .stat-label { color: rgba(255,255,255,.86); font-size: .85rem; }
 
-    .trust-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; padding: 22px 0; border-top: 1px solid rgba(7,92,112,.14); border-bottom: 1px solid rgba(7,92,112,.14); background: rgba(255,253,244,.68); }
-    .trust-point { display: flex; align-items: center; justify-content: center; gap: 9px; color: var(--peacock); font-weight: 700; }
-    .trust-point svg { width: 27px; height: 27px; flex: 0 0 auto; color: var(--marigold); }
+    .tradition-section { background: var(--paper); }
+    .tradition-grid { display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 50px; }
+    .tradition-copy { max-width: 620px; }
+    .tradition-copy p { color: var(--muted); }
+    .line-art-panel {
+      display: grid;
+      min-height: 280px;
+      place-items: center;
+      overflow: hidden;
+      border: 1px solid var(--gold-light);
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at center, rgba(197,154,71,.14), transparent 58%),
+        repeating-linear-gradient(45deg, transparent 0 14px, rgba(22,75,59,.035) 14px 15px);
+      color: var(--green);
+    }
+    .line-art-panel svg { width: min(245px, 72%); height: auto; }
+    .line-art-panel path, .line-art-panel circle, .line-art-panel line, .line-art-panel ellipse { fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7; }
+    .lab-card { display: none; margin-top: 22px; padding: 17px; border: 1px solid var(--line); border-radius: 12px; background: var(--cream); }
+    .lab-card.is-visible { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .lab-card p { margin: 0; color: var(--muted); font-size: .85rem; }
 
-    /* Products */
-    .products-grid, .why-grid, .steps-grid, .reviews-grid { display: grid; gap: 20px; }
-    .products-grid { grid-template-columns: repeat(3, 1fr); }
-    .product-card { overflow: hidden; border: 1px solid rgba(7,92,112,.2); border-radius: 120px 120px 20px 20px / 76px 76px 20px 20px; background: var(--paper); box-shadow: var(--shadow); text-align: center; }
-    .product-art { display: grid; height: 190px; place-items: center; background: linear-gradient(145deg, #fbefca, #f4d987); }
-    .mini-jar { position: relative; display: grid; width: 92px; height: 115px; place-items: center; border: 4px solid rgba(255,255,255,.8); border-radius: 16px 16px 22px 22px; background: linear-gradient(90deg, #fff2cc, #f0c95e 45%, #e8b63c); box-shadow: 0 12px 16px rgba(102, 69, 21, .16); }
-    .mini-jar::before { position: absolute; top: -13px; width: 52px; height: 13px; border-radius: 4px 4px 2px 2px; background: #a8782b; content: ""; }
-    .mini-jar span { padding: 5px; background: #fff9e9; color: #76501d; font: 700 .67rem var(--serif); }
-    .product-info { padding: 22px; }
-    .product-info h3 { margin: 0; font-size: 1.6rem; }
-    .price { margin: 7px 0 18px; color: #855913; font-weight: 750; }
-    .product-info .button { width: 100%; }
-    .product-card:nth-child(2) .product-art { background: linear-gradient(145deg, #f8edcf, #ebc76c); }
-    .product-card:nth-child(3) .product-art { background: linear-gradient(145deg, #f7e8ba, #e9bd50); }
+    .journey-section { overflow: hidden; background: var(--cream); }
+    .timeline { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 0 54px; margin: 0; padding: 0; list-style: none; }
+    .timeline::before { position: absolute; top: 16px; bottom: 16px; left: 50%; width: 1px; background: var(--gold-light); content: ""; }
+    .timeline-item { position: relative; width: calc(100% - 30px); margin-bottom: 22px; }
+    .timeline-item:nth-child(odd) { grid-column: 1; justify-self: end; text-align: right; }
+    .timeline-item:nth-child(even) { grid-column: 2; justify-self: start; margin-top: 38px; }
+    .timeline-item::after {
+      position: absolute;
+      top: 19px;
+      width: 11px;
+      height: 11px;
+      border: 2px solid var(--paper);
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 1px var(--gold);
+      content: "";
+    }
+    .timeline-item:nth-child(odd)::after { right: -37px; }
+    .timeline-item:nth-child(even)::after { left: -37px; }
+    .timeline-card { padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); }
+    .timeline-icon { display: inline-grid; width: 38px; height: 38px; place-items: center; margin-bottom: 10px; border-radius: 50%; background: var(--green-soft); color: var(--green); }
+    .timeline-icon .icon { width: 23px; height: 23px; }
+    .timeline-card h3 { margin-bottom: 4px; color: var(--green-deep); font-size: 1.05rem; }
+    .timeline-card p { margin: 0; color: var(--muted); font-size: .86rem; }
 
-    /* Why us */
-    .why-section { background: #edf3e6; }
-    .why-grid { grid-template-columns: repeat(4, 1fr); }
-    .why-card { padding: 25px 20px; border: 1px solid rgba(91,61,31,.1); border-radius: 18px; background: rgba(255,253,247,.8); }
-    .icon-circle { display: grid; width: 47px; height: 47px; place-items: center; margin-bottom: 17px; border-radius: 50%; background: #f6e7bf; color: #946217; font-size: 1.3rem; }
-    .why-card h3 { margin: 0 0 7px; font-size: 1.25rem; }
-    .why-card p { margin: 0; color: var(--brown-soft); font-size: .92rem; }
+    .why-section { background: var(--green-deep); color: white; }
+    .why-section .eyebrow { color: #ead39a; }
+    .why-section .section-copy { color: rgba(255,255,255,.75); }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+    .why-card { padding: 22px 19px; border: 1px solid rgba(255,255,255,.16); border-radius: 14px; background: rgba(255,255,255,.055); }
+    .why-card .icon { margin-bottom: 14px; color: #e4c57c; }
+    .why-card h3 { color: #fff8e9; font-size: 1.12rem; }
+    .why-card p { margin: 0; color: rgba(255,255,255,.74); font-size: .86rem; }
 
-    /* Process */
-    .steps-grid { grid-template-columns: repeat(4, 1fr); counter-reset: step; }
-    .step-card { position: relative; }
-    /* PHOTO PLACEHOLDER: replace each illustrated step panel with a photo of your actual process. */
-    .step-photo { display: grid; height: 160px; place-items: center; border: 1px solid rgba(7,92,112,.2); border-radius: 100px 100px 16px 16px / 62px 62px 16px 16px; background: linear-gradient(145deg, #f4e3b2, #edcf7c); color: #946317; font-size: 2.4rem; }
-    .step-card:nth-child(2) .step-photo { background: linear-gradient(145deg, #f6e9c8, #e6ca8d); }
-    .step-card:nth-child(3) .step-photo { background: linear-gradient(145deg, #f4df9c, #e5ba53); }
-    .step-card:nth-child(4) .step-photo { background: linear-gradient(145deg, #f1e5c7, #dcbf7a); }
-    .step-number { display: inline-grid; width: 28px; height: 28px; place-items: center; margin-top: 15px; border-radius: 50%; background: var(--brown); color: white; font-size: .8rem; font-weight: 700; }
-    .step-card h3 { display: inline-block; margin: 0 0 0 8px; font-size: 1.2rem; }
-    .step-card p { margin: 8px 0 0; color: var(--brown-soft); font-size: .9rem; }
+    .testimonials-section { background: var(--paper); }
+    .carousel { max-width: 760px; margin: auto; }
+    .testimonial-card {
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 34px clamp(23px, 6vw, 62px);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--cream);
+      text-align: center;
+    }
+    .testimonial-mark { margin-bottom: 8px; color: var(--gold); font: 3rem/.8 var(--serif); }
+    .testimonial-text { margin-bottom: 19px; color: var(--muted); font: italic 1.08rem/1.6 var(--serif); }
+    .testimonial-author { margin: 0; color: var(--green-deep); font-size: .87rem; font-weight: 700; }
+    .carousel-controls { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 20px; }
+    .carousel-button {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border: 1px solid var(--gold-light);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--green);
+      cursor: pointer;
+    }
+    .carousel-button:hover { background: var(--green-soft); }
+    .carousel-status { min-width: 52px; color: var(--muted); font-size: .84rem; text-align: center; }
 
-    /* Story */
-    .story-section { background: #f2e8d2; }
-    .story-grid { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: 55px; }
-    /* PHOTO PLACEHOLDER: replace this block with a founder image; keep descriptive alt text. */
-    .founder-placeholder { display: grid; min-height: 330px; place-items: center; border: 1px dashed #b78a3d; border-radius: 150px 150px 24px 24px / 100px 100px 24px 24px; background: linear-gradient(145deg, #f2dda5, #fff5d9); color: #8c641f; text-align: center; }
-    .founder-placeholder span { display: block; font-size: 3rem; }
-    .founder-placeholder small { display: block; font-weight: 700; }
-    .story-copy p { color: var(--brown-soft); }
-    .story-sign { margin-top: 22px; color: #8d5f17; font: italic 1.1rem var(--serif); }
+    .faq-section { background: var(--cream); }
+    .faq-list { max-width: 790px; margin: auto; border-top: 1px solid var(--line); }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-item summary { position: relative; padding: 19px 42px 19px 2px; color: var(--green-deep); font-weight: 700; cursor: pointer; list-style: none; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { position: absolute; top: 50%; right: 6px; color: var(--gold); content: "+"; font-size: 1.45rem; font-weight: 400; transform: translateY(-50%); }
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-item p { max-width: 700px; margin: -2px 0 18px; color: var(--muted); font-size: .93rem; }
 
-    /* Reviews */
-    .reviews-grid { grid-template-columns: repeat(3, 1fr); }
-    .review-card { padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); box-shadow: 0 10px 28px rgba(89,61,27,.07); }
-    .stars { color: #bd841e; letter-spacing: .12em; }
-    .review-card blockquote { margin: 14px 0 18px; color: var(--brown-soft); }
-    .review-card cite { font-style: normal; font-weight: 750; }
-    .review-card cite small { display: block; color: #8d765b; font-size: .78rem; font-weight: 400; }
+    .tagline-strip { overflow: hidden; padding: 19px 0; background: #eadcbf; color: var(--green-deep); }
+    .tagline-track { display: flex; width: max-content; animation: tagline-scroll 27s linear infinite; }
+    .tagline-text { padding-right: 22px; font: 600 .85rem var(--sans); letter-spacing: .13em; white-space: nowrap; }
+    @keyframes tagline-scroll { to { transform: translateX(-50%); } }
 
-    /* FAQ */
-    .faq-section { background: #eaf2ed; }
-    .faq-list { max-width: 780px; margin: auto; }
-    details { border-bottom: 1px solid rgba(91,61,31,.17); }
-    summary { position: relative; padding: 20px 36px 20px 2px; cursor: pointer; font: 700 1.14rem var(--serif); list-style: none; }
-    summary::-webkit-details-marker { display: none; }
-    summary::after { position: absolute; right: 4px; color: #9c6917; content: "+"; font: 400 1.5rem var(--sans); }
-    details[open] summary::after { content: "−"; }
-    details p { margin: 0; padding: 0 28px 20px 2px; color: var(--brown-soft); }
+    .contact-section { background: var(--paper); }
+    .contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 32px; align-items: start; }
+    .contact-options { display: grid; gap: 14px; }
+    .contact-card { display: flex; align-items: flex-start; gap: 14px; padding: 19px; border: 1px solid var(--line); border-radius: 14px; background: var(--cream); text-decoration: none; }
+    .contact-card:hover { border-color: var(--gold); }
+    .contact-card-icon { display: grid; width: 42px; height: 42px; flex: 0 0 auto; place-items: center; border-radius: 50%; background: var(--green-soft); color: var(--green); }
+    .contact-card-icon .icon { width: 22px; height: 22px; }
+    .contact-card strong { display: block; margin: 1px 0 3px; color: var(--green-deep); }
+    .contact-card span { color: var(--muted); font-size: .87rem; overflow-wrap: anywhere; }
+    .contact-form { padding: 25px; border: 1px solid var(--line); border-radius: 16px; background: var(--cream); }
+    .contact-form h3 { margin-bottom: 5px; color: var(--green-deep); font-size: 1.45rem; }
+    .form-note { margin-bottom: 19px; color: var(--muted); font-size: .85rem; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .field { display: grid; gap: 6px; }
+    .field--full { grid-column: 1 / -1; }
+    .field label { color: #4d493f; font-size: .83rem; font-weight: 700; }
+    .field input, .field textarea {
+      width: 100%;
+      min-height: 46px;
+      border: 1px solid #d6cebe;
+      border-radius: 8px;
+      padding: 11px 12px;
+      background: #fffefa;
+      color: var(--ink);
+    }
+    .field textarea { min-height: 108px; resize: vertical; }
+    .field input:focus, .field textarea:focus { border-color: var(--green); outline: 2px solid rgba(22,75,59,.16); }
+    .form-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .form-error { min-height: 1.4em; margin: 10px 0 0; color: #922b2b; font-size: .85rem; }
 
-    /* Contact and footer */
-    .contact-section { background: linear-gradient(135deg, #075c70, #542b35); color: #fff9eb; text-align: center; }
-    .contact-section .eyebrow { color: #f0ce7d; }
-    .contact-section h2 { color: #fff8e8; }
-    .contact-section p { color: #f0dfc0; }
-    .contact-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px; margin: 24px 0 12px; }
-    .email-link { color: #ffe3a2; font-weight: 700; text-underline-offset: 4px; }
-    .reply-note { font-size: .9rem; }
-    footer { padding: 27px 0; background: #3e2530; color: #f4e7d4; font-size: .9rem; }
-    .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
-    .footer-inner p { margin: 0; }
-    .social-links { display: flex; gap: 16px; }
-    .social-links a { color: #f1d89e; text-decoration: none; }
-    .social-links a:hover { text-decoration: underline; }
-    .fssai { color: #cdb998; }
+    footer { padding: 51px 0 20px; background: #12392f; color: rgba(255,255,255,.82); }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 30px; padding-bottom: 35px; }
+    .footer-brand { color: #fff6e5; font: 700 1.25rem var(--serif); }
+    .footer-tagline { max-width: 250px; margin: 11px 0 0; color: rgba(255,255,255,.7); font-size: .88rem; }
+    .footer-title { margin-bottom: 12px; color: #f0d99f; font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    .footer-links { display: grid; gap: 8px; }
+    .footer-links a { width: fit-content; color: rgba(255,255,255,.8); font-size: .86rem; text-decoration: none; }
+    .footer-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.16); font-size: .8rem; }
+    .footer-bottom p { margin: 0; }
     .floating-wa {
       position: fixed;
-      right: 20px;
-      bottom: max(20px, env(safe-area-inset-bottom));
-      z-index: 20;
+      z-index: 50;
+      right: max(16px, env(safe-area-inset-right));
+      bottom: max(16px, env(safe-area-inset-bottom));
       display: grid;
       width: 58px;
       height: 58px;
       place-items: center;
-      border: 3px solid #fff;
+      border: 2px solid white;
       border-radius: 50%;
-      background: #087c78;
+      background: #16834c;
       color: white;
-      box-shadow: 0 8px 24px rgba(0,0,0,.22);
-      font-size: .95rem;
-      font-weight: 800;
+      box-shadow: 0 8px 22px rgba(0,0,0,.2);
       text-decoration: none;
       transition: transform .2s ease;
     }
-    .floating-wa:hover { transform: scale(1.07); }
-    .floating-wa svg { width: 29px; height: 29px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+    .floating-wa:hover { transform: scale(1.06); }
+    .floating-wa .icon { width: 30px; height: 30px; }
 
-    /* MORPANKH LOAD ANIMATION: Remove this block to disable the falling-feather effect. */
-    .morpankh-overlay {
-      position: fixed;
-      z-index: 1000;
-      inset: 0;
-      overflow: hidden;
-      pointer-events: none;
-    }
-    .morpankh-feather {
-      position: absolute;
-      top: -22vh;
-      width: var(--feather-width);
-      height: auto;
-      opacity: 0;
-      will-change: transform, opacity;
-      animation: morpankh-fall var(--fall-duration) cubic-bezier(.36,.04,.62,.99) var(--fall-delay) forwards;
-    }
-    @keyframes morpankh-fall {
-      0% { opacity: 0; transform: translate3d(0, -4vh, 0) rotate(-16deg); }
-      9% { opacity: .88; }
-      28% { transform: translate3d(var(--sway), 27vh, 0) rotate(13deg); }
-      52% { transform: translate3d(calc(var(--sway) * -.55), 56vh, 0) rotate(-11deg); }
-      76% { opacity: .72; transform: translate3d(var(--sway), 84vh, 0) rotate(15deg); }
-      100% { opacity: 0; transform: translate3d(0, 112vh, 0) rotate(-12deg); }
-    }
+    [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
+    [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
+    .timeline-item[data-reveal] { transition-delay: var(--reveal-delay, 0ms); }
 
-    @media (max-width: 850px) {
-      .header-inner { position: relative; }
-      .menu-toggle { display: inline-grid; place-items: center; order: 3; }
-      .header-cta { margin-left: auto; }
+    @media (max-width: 930px) {
+      .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .menu-toggle { display: grid; }
+      .header-inner { min-height: 70px; }
       .nav {
-        position: absolute;
-        top: calc(100% + 1px);
+        position: fixed;
+        z-index: 31;
+        top: 77px;
         right: 0;
-        left: 0;
-        display: none;
+        bottom: 0;
+        display: flex;
+        width: min(340px, 88vw);
         align-items: stretch;
         flex-direction: column;
         gap: 0;
-        padding: 8px 20px 16px;
-        border-bottom: 1px solid var(--line);
+        padding: 18px 23px;
+        border-left: 1px solid var(--line);
         background: var(--cream);
-        box-shadow: 0 12px 18px rgba(89,61,27,.08);
+        box-shadow: -15px 0 35px rgba(49,39,25,.12);
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+        transition: opacity .22s ease, visibility .22s ease;
       }
-      .nav.is-open { display: flex; }
-      .nav a { padding: 10px 2px; }
-      .hero-grid { gap: 20px; }
-      .why-grid { grid-template-columns: repeat(2, 1fr); }
-      .steps-grid { grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
-      .trust-strip { grid-template-columns: repeat(2, 1fr); }
+      .nav.is-open { opacity: 1; pointer-events: auto; visibility: visible; }
+      .nav a { padding: 14px 2px; border-bottom: 1px solid var(--line); font-size: 1rem; }
+      .nav-backdrop { position: fixed; z-index: 29; inset: 0; display: none; border: 0; background: rgba(18,30,25,.4); }
+      .nav-backdrop.is-open { display: block; }
+      .header-actions { margin-left: auto; }
+      .hero-logo-image { width: min(100%, 390px); }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    @media (max-width: 600px) {
-      .wrap { width: min(100% - 32px, 480px); }
-      section { padding: 64px 0; }
-      .header-inner { min-height: 68px; gap: 6px; }
+    @media (max-width: 680px) {
+      .wrap { width: min(100% - 32px, 520px); }
+      section { padding: 65px 0; }
+      .announcement { padding-inline: 38px; font-size: .75rem; }
+      .header-inner { gap: 8px; }
       .brand { gap: 7px; }
-      .brand-mark { width: 36px; height: 36px; }
-      .brand-name { font-size: .85rem; }
-      .header-cta { min-height: 40px; padding: 8px 10px; font-size: .71rem; }
-      .menu-toggle { padding: 4px; }
-      .hero { padding: 58px 0 60px; }
-      .hero-grid { grid-template-columns: 1fr; text-align: center; }
-      .hero h1 { margin-inline: auto; font-size: clamp(2.05rem, 9.5vw, 3.5rem); }
-      .hero-copy { margin-inline: auto; font-size: 1rem; }
-      .hero-note { justify-content: center; }
-      .hero-visual { min-height: 300px; margin-top: 4px; }
-      .sun-disc { width: 255px; }
-      .jar-art { transform: scale(.84); }
-      .hero-stamp { right: 1%; bottom: 7%; width: 77px; height: 77px; font-size: .68rem; }
-      .products-grid, .reviews-grid { grid-template-columns: 1fr; }
-      .product-card { max-width: 390px; width: 100%; margin-inline: auto; }
-      .why-grid { gap: 12px; }
-      .why-card { padding: 19px 15px; }
-      .trust-point { gap: 6px; font-size: .9rem; }
-      .trust-point svg { width: 23px; height: 23px; }
-      .steps-grid { gap: 20px 14px; }
-      .step-photo { height: 125px; }
-      .step-card h3 { font-size: 1.03rem; }
-      .story-grid { grid-template-columns: 1fr; gap: 28px; }
-      .founder-placeholder { min-height: 260px; }
-      .footer-inner { justify-content: center; text-align: center; }
-      .floating-wa { right: 15px; width: 54px; height: 54px; }
+      .brand-mark { width: 34px; height: 34px; }
+      .brand-name { font-size: .94rem; }
+      .brand-english { display: none; }
+      .header-actions .button { min-height: 41px; padding: 9px 12px; font-size: .78rem; }
+      .menu-toggle { width: 39px; height: 39px; }
+      .hero { min-height: 510px; padding: 74px 0 87px; }
+      .hero-inner { display: block; }
+      .hero-content { max-width: 100%; }
+      .hero-logo-wrap { position: absolute; z-index: 0; inset: 0; overflow: hidden; pointer-events: none; }
+      .hero-logo-image {
+        width: min(76vw, 310px);
+        opacity: .18;
+        box-shadow: none;
+        mask-image: radial-gradient(circle, #000 45%, transparent 76%);
+        -webkit-mask-image: radial-gradient(circle, #000 45%, transparent 76%);
+      }
+      .hero h1 { font-size: clamp(2.3rem, 10.5vw, 3.6rem); }
+      .hero-copy { max-width: 510px; font-size: 1rem; }
+      .marquee-item { padding: 15px 18px; font-size: .78rem; }
+      .products-grid { grid-template-columns: 1fr; gap: 18px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px 6px; }
+      .stat { padding: 9px 5px; }
+      .tradition-grid { grid-template-columns: 1fr; gap: 27px; }
+      .line-art-panel { min-height: 225px; }
+      .lab-card.is-visible { align-items: flex-start; flex-direction: column; }
+      .timeline { display: block; padding-left: 28px; }
+      .timeline::before { top: 12px; bottom: 12px; left: 7px; }
+      .timeline-item, .timeline-item:nth-child(odd), .timeline-item:nth-child(even) {
+        width: 100%;
+        margin: 0 0 14px;
+        text-align: left;
+      }
+      .timeline-item:nth-child(even) { margin-top: 0; }
+      .timeline-item:nth-child(odd)::after, .timeline-item:nth-child(even)::after { top: 20px; right: auto; left: -26px; }
+      .timeline-card { padding: 16px; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); gap: 11px; }
+      .why-card { padding: 18px 15px; }
+      .why-card h3 { font-size: 1rem; }
+      .why-card p { font-size: .82rem; }
+      .testimonial-card { min-height: 250px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 23px; }
+      .contact-form { padding: 20px; }
+      .floating-wa { width: 54px; height: 54px; }
     }
-    @media (max-width: 360px) {
-      .wrap { width: calc(100% - 24px); }
-      .header-inner { flex-wrap: wrap; padding-block: 8px; }
-      .brand-mark { width: 32px; height: 32px; }
-      .brand-name { font-size: .74rem; }
-      .header-cta { order: 2; width: 100%; min-height: 38px; margin-left: 0; padding: 7px 7px; font-size: .72rem; }
-      .menu-toggle { order: 1; margin-left: auto; font-size: 1.35rem; }
+    @media (max-width: 390px) {
+      .header-actions .button { padding-inline: 9px; font-size: .72rem; }
+      .header-inner { gap: 6px; }
+      .brand-name { font-size: .86rem; }
+      .brand-mark { width: 31px; height: 31px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field--full { grid-column: auto; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px 15px; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      *, *::before, *::after { transition-duration: .01ms !important; }
-      .morpankh-overlay { display: none !important; }
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      [data-reveal] { opacity: 1; transform: none; }
     }
   </style>
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip-link" id="skip-link" href="#main"></a>
+
+  <div class="announcement" id="announcement">
+    <span id="announcement-text"></span>
+    <button class="announcement-close" id="announcement-close" type="button">×</button>
+  </div>
+
+  <header class="site-header" id="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="#home" aria-label="Gauriganesh Ghee home">
-        <span class="brand-mark" aria-hidden="true">G</span>
-        <span class="brand-copy"><span class="brand-name">Gauriganesh Ghee</span></span>
+      <a class="brand" id="header-brand" href="#home">
+        <img class="brand-mark" id="brand-mark" src="images/Gauri_Ganesh_Pure_Desi_Ghee.png" alt="">
+        <span class="brand-copy">
+          <span class="brand-name" id="brand-name" lang="hi"></span>
+          <span class="brand-english" id="brand-english"></span>
+        </span>
       </a>
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
-      <nav class="nav" id="primary-nav" aria-label="Main navigation">
-        <a href="#products">Products</a>
-        <a href="#why-us">Why Us</a>
-        <a href="#story">Our Story</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="button header-cta" href="https://wa.me/917839512687?text=Hi%2C%20I%20want%20to%20order%20Gauriganesh%20Ghee." target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+      <nav class="nav" id="primary-nav"></nav>
+      <div class="header-actions">
+        <a class="button button--small" id="header-whatsapp" href="#" target="_blank" rel="noopener noreferrer"></a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
     </div>
   </header>
+  <button class="nav-backdrop" id="nav-backdrop" type="button"></button>
 
-  <main>
+  <main id="main">
     <section class="hero" id="home">
-      <div class="wrap hero-grid">
-        <div>
-          <h1>गौरीगणेश का<br><span>शुद्ध देसी घी</span></h1>
-          <p class="hero-copy">Pure, traditionally made ghee, prepared with care and packed fresh for your family.</p>
-          <a class="button" href="https://wa.me/917839512687?text=Hi%2C%20I%20want%20to%20order%20Gauriganesh%20Ghee." target="_blank" rel="noopener noreferrer">Order on WhatsApp <span aria-hidden="true">→</span></a>
-          <div class="hero-note">Available in 250 g, 500 g and 1 kg jars</div>
-        </div>
-        <div class="hero-visual" role="img" aria-label="Illustration placeholder of a Gauriganesh Ghee jar">
-          <div class="sun-disc" aria-hidden="true"></div>
-          <div class="jar-art" aria-hidden="true">
-            <div class="jar-lid"></div><div class="jar-neck"></div>
-            <div class="jar-body"><div class="jar-label"><strong>Gauriganesh</strong><small>Pure Ghee</small></div></div>
-            <div class="jar-ghee"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-content" data-reveal>
+          <p class="eyebrow" id="hero-eyebrow" lang="hi"></p>
+          <h1 id="hero-title"></h1>
+          <p class="hero-copy" id="hero-copy"></p>
+          <div class="hero-actions">
+                <a class="button" id="hero-whatsapp" href="#" target="_blank" rel="noopener noreferrer"></a>
+                <a class="button button--outline" id="hero-email" href="#"></a>
           </div>
-          <div class="hero-stamp" aria-hidden="true">MADE WITH<br>CARE ✦</div>
+        </div>
+        <div class="hero-logo-wrap">
+          <img class="hero-logo-image" id="hero-logo-image" src="images/Gauri_Ganesh_Pure_Desi_Ghee.png" alt="Gauri Ganesh Pure Desi Ghee – cow and calf in Vrindavan" loading="eager" fetchpriority="high">
         </div>
       </div>
     </section>
 
-    <div class="trust-strip wrap" aria-label="Four reasons to trust our ghee">
-      <div class="trust-point"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m16 3 11 5v8c0 7-5 11-11 13C10 27 5 23 5 16V8z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m11 16 3 3 7-7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>Purity</div>
-      <div class="trust-point"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 27S4 20 7 10c2-6 7-5 9 0 2-5 7-6 9 0 3 10-9 17-9 17Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 24V10" stroke="currentColor" stroke-width="2"/></svg>Tradition</div>
-      <div class="trust-point"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4c4 6 9 10 9 16a9 9 0 0 1-18 0c0-6 5-10 9-16Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 21c1 2 3 3 5 3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg>Freshness</div>
-      <div class="trust-point"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m16 3 11 5v8c0 7-5 11-11 13C10 27 5 23 5 16V8z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m11 21 10-10m-9 0 10 10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg>No additives</div>
+    <div class="trust-strip" id="trust-strip">
+      <div class="marquee" id="trust-marquee" aria-hidden="true"></div>
     </div>
-    <div class="yamuna-divider" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0 15C120 43 240 43 360 15S600-13 720 15s240 28 360 0 240-28 360 0M0 28c120 24 240 24 360 0s240-24 360 0 240 24 360 0 240-24 360 0"/></svg></div>
 
-    <section id="products">
+    <section id="our-ghee">
       <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Choose your jar</p>
-          <h2>Our Products</h2>
-          <div class="section-ornament" aria-hidden="true"><svg viewBox="0 0 48 36"><path d="M24 33C22 23 12 21 12 13c0-5 5-8 12 0 7-8 12-5 12 0 0 8-10 10-12 20ZM24 31V11" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 28h24" stroke="currentColor" stroke-width="2"/></svg></div>
-          <p class="section-intro">Choose the size that suits your kitchen. Message us on WhatsApp to place an order.</p>
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow" id="ghee-eyebrow"></p>
+          <h2 id="ghee-title"></h2>
+          <div class="gold-rule"></div>
+          <p class="section-copy" id="ghee-intro"></p>
         </div>
-        <div class="products-grid">
-          <article class="product-card">
-            <div class="product-art" aria-hidden="true"><div class="mini-jar"><span>PURE<br>GHEE</span></div></div>
-            <div class="product-info">
-              <h3>250 g</h3>
-              <!-- PRICE PLACEHOLDER: replace ₹___ with your confirmed price. -->
-              <p class="price">Price: ₹___</p>
-                  <a class="button" href="https://wa.me/917839512687?text=Hi%2C%20I%20want%20to%20order%20Gauriganesh%20Ghee%20-%20250%20g." target="_blank" rel="noopener noreferrer">Order 250 g on WhatsApp</a>
+        <div class="products-grid" id="products-grid"></div>
+      </div>
+    </section>
+
+    <section class="stats-section" id="stats" aria-label="Our numbers">
+      <div class="wrap stats-grid" id="stats-grid"></div>
+    </section>
+
+    <section class="tradition-section" id="about">
+      <div class="wrap tradition-grid">
+        <div class="tradition-copy" data-reveal>
+          <p class="eyebrow" id="about-eyebrow"></p>
+          <h2 id="about-title"></h2>
+          <div class="gold-rule" style="margin-left:0"></div>
+          <div id="about-copy"></div>
+          <div class="lab-card" id="lab-card" hidden>
+            <div>
+              <strong id="lab-title"></strong>
+              <p id="lab-description"></p>
             </div>
-          </article>
-          <article class="product-card">
-            <div class="product-art" aria-hidden="true"><div class="mini-jar"><span>PURE<br>GHEE</span></div></div>
-            <div class="product-info">
-              <h3>500 g</h3>
-              <!-- PRICE PLACEHOLDER: replace ₹___ with your confirmed price. -->
-              <p class="price">Price: ₹___</p>
-              <a class="button" href="https://wa.me/917839512687?text=Hi%2C%20I%20want%20to%20order%20Gauriganesh%20Ghee%20-%20500%20g." target="_blank" rel="noopener noreferrer">Order 500 g on WhatsApp</a>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-art" aria-hidden="true"><div class="mini-jar"><span>PURE<br>GHEE</span></div></div>
-            <div class="product-info">
-              <h3>1 kg</h3>
-              <!-- PRICE PLACEHOLDER: replace ₹___ with your confirmed price. -->
-              <p class="price">Price: ₹___</p>
-              <a class="button" href="https://wa.me/917839512687?text=Hi%2C%20I%20want%20to%20order%20Gauriganesh%20Ghee%20-%201%20kg." target="_blank" rel="noopener noreferrer">Order 1 kg on WhatsApp</a>
-            </div>
-          </article>
+            <a class="button button--small" id="lab-link" href="#" target="_blank" rel="noopener noreferrer"></a>
+          </div>
+        </div>
+        <!-- Neutral decorative line-art only; no product or lifestyle photo. -->
+        <div class="line-art-panel" data-reveal aria-hidden="true">
+          <svg viewBox="0 0 250 250">
+            <path d="M125 222V78m0 91c-39-1-60-24-60-61 34 1 54 17 60 51 7-34 27-50 60-51 1 37-21 60-60 61Zm0-91c-25-20-25-43 0-70 25 27 25 50 0 70Z"/>
+            <path d="M73 221h104m-91-12h78m-63-13h48"/>
+            <path d="M95 126c0-17 13-27 30-27s30 10 30 27v45H95zm0 12h60m-41-12v-9m22 9v-9"/>
+            <circle cx="125" cy="73" r="8"/><path d="M125 57v32m-16-16h32"/>
+          </svg>
         </div>
       </div>
     </section>
 
-    <div class="yamuna-divider" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0 15C120 43 240 43 360 15S600-13 720 15s240 28 360 0 240-28 360 0M0 28c120 24 240 24 360 0s240-24 360 0 240 24 360 0 240-24 360 0"/></svg></div>
+    <section class="journey-section" id="journey">
+      <div class="wrap">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow" id="journey-eyebrow"></p>
+          <h2 id="journey-title"></h2>
+          <div class="gold-rule"></div>
+          <p class="section-copy" id="journey-intro"></p>
+        </div>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
     <section class="why-section" id="why-us">
       <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Our promise</p>
-          <h2>Why Choose Gauriganesh Ghee</h2>
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow" id="why-eyebrow"></p>
+          <h2 id="why-title"></h2>
+          <p class="section-copy" id="why-intro"></p>
         </div>
-        <div class="why-grid">
-          <article class="why-card"><div class="icon-circle" aria-hidden="true">✦</div><h3>Pure</h3><p>Made with care for a comforting staple in your everyday meals.</p></article>
-          <article class="why-card"><div class="icon-circle" aria-hidden="true">♨</div><h3>Traditional method</h3><p>Prepared with a traditional approach that honours the familiar taste of home.</p></article>
-          <article class="why-card"><div class="icon-circle" aria-hidden="true">♡</div><h3>No additives</h3><p>No additives are added to our ghee.</p></article>
-          <article class="why-card"><div class="icon-circle" aria-hidden="true">❋</div><h3>Fresh & carefully packed</h3><p>Each jar is carefully packed to help it reach your kitchen in good condition.</p></article>
-        </div>
+        <div class="why-grid" id="why-grid"></div>
       </div>
     </section>
 
-    <div class="yamuna-divider" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0 15C120 43 240 43 360 15S600-13 720 15s240 28 360 0 240-28 360 0M0 28c120 24 240 24 360 0s240-24 360 0 240 24 360 0 240-24 360 0"/></svg></div>
-    <section id="process">
+    <section class="testimonials-section" id="reviews">
       <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">From our kitchen</p>
-          <h2>How It's Made</h2>
-          <p class="section-intro">A simple, careful process brings every jar from preparation to your home.</p>
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow" id="reviews-eyebrow"></p>
+          <h2 id="reviews-title"></h2>
+          <p class="section-copy" id="reviews-intro"></p>
         </div>
-        <div class="steps-grid">
-          <article class="step-card"><div class="step-photo" role="img" aria-label="Placeholder illustration for selecting ingredients">🌾</div><span class="step-number">1</span><h3>Choose with care</h3><p>We begin with ingredients selected for making ghee.</p></article>
-          <article class="step-card"><div class="step-photo" role="img" aria-label="Placeholder illustration for traditional preparation">♨</div><span class="step-number">2</span><h3>Prepare traditionally</h3><p>Our ghee is prepared using a traditional method.</p></article>
-          <article class="step-card"><div class="step-photo" role="img" aria-label="Placeholder illustration for careful checking">✧</div><span class="step-number">3</span><h3>Check each batch</h3><p>We take care as each batch is prepared and handled.</p></article>
-          <article class="step-card"><div class="step-photo" role="img" aria-label="Placeholder illustration for packing a jar">▣</div><span class="step-number">4</span><h3>Pack with care</h3><p>Then it is carefully packed in jars, ready for your table.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <div class="yamuna-divider" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0 15C120 43 240 43 360 15S600-13 720 15s240 28 360 0 240-28 360 0M0 28c120 24 240 24 360 0s240-24 360 0 240 24 360 0 240-24 360 0"/></svg></div>
-    <section class="story-section" id="story">
-      <div class="wrap story-grid">
-        <div class="founder-placeholder" role="img" aria-label="Founder photo placeholder">
-          <div><span aria-hidden="true">📷</span><small>Founder photo placeholder</small></div>
-        </div>
-        <div class="story-copy">
-          <p class="eyebrow">Our story</p>
-          <h2>Our Story</h2>
-          <!-- STORY PLACEHOLDER: replace this paragraph with your real founder and business story. -->
-          <p>Gauriganesh Ghee began with a simple wish: to share the warmth and familiar taste of traditionally made ghee with more families. We make every jar with care, taking pride in the small details from preparation to packing.</p>
-          <p>We'd love for our ghee to find a place in your everyday cooking and special family moments.</p>
-          <div class="story-sign">With care, the Gauriganesh Ghee family</div>
+        <div class="carousel" id="reviews-carousel" data-reveal aria-roledescription="carousel">
+          <div class="testimonial-card" id="testimonial-card" aria-live="polite"></div>
+          <div class="carousel-controls">
+            <button class="carousel-button" id="review-previous" type="button">←</button>
+            <span class="carousel-status" id="review-status" aria-live="polite"></span>
+            <button class="carousel-button" id="review-next" type="button">→</button>
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="yamuna-divider" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0 15C120 43 240 43 360 15S600-13 720 15s240 28 360 0 240-28 360 0M0 28c120 24 240 24 360 0s240-24 360 0 240 24 360 0 240-24 360 0"/></svg></div>
-    <section id="reviews">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Kind words</p>
-          <h2>Customer Reviews</h2>
-          <p class="section-intro">We'd love to hear what you think. These spaces are ready for genuine customer feedback.</p>
-        </div>
-        <div class="reviews-grid">
-          <!-- REVIEW PLACEHOLDER: replace with a real review and get permission before publishing it. -->
-          <article class="review-card"><div class="stars" aria-label="Rating placeholder">★★★★★</div><blockquote>“Add a real customer review here.”</blockquote><cite>Customer name<small>Review placeholder</small></cite></article>
-          <!-- REVIEW PLACEHOLDER: replace with a real review and get permission before publishing it. -->
-          <article class="review-card"><div class="stars" aria-label="Rating placeholder">★★★★★</div><blockquote>“Add a real customer review here.”</blockquote><cite>Customer name<small>Review placeholder</small></cite></article>
-          <!-- REVIEW PLACEHOLDER: replace with a real review and get permission before publishing it. -->
-          <article class="review-card"><div class="stars" aria-label="Rating placeholder">★★★★★</div><blockquote>“Add a real customer review here.”</blockquote><cite>Customer name<small>Review placeholder</small></cite></article>
-        </div>
-      </div>
-    </section>
-
-    <div class="yamuna-divider" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0 15C120 43 240 43 360 15S600-13 720 15s240 28 360 0 240-28 360 0M0 28c120 24 240 24 360 0s240-24 360 0 240 24 360 0 240-24 360 0"/></svg></div>
     <section class="faq-section" id="faq">
       <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Good to know</p>
-          <h2>Frequently Asked Questions</h2>
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow" id="faq-eyebrow"></p>
+          <h2 id="faq-title"></h2>
+          <p class="section-copy" id="faq-intro"></p>
         </div>
-        <div class="faq-list">
-          <details><summary>What is the shelf life of the ghee?</summary><p>Please check the best-before date printed on the jar. For product-specific shelf-life information, message us on WhatsApp.</p></details>
-          <details><summary>How should I store the ghee?</summary><p>Keep the jar tightly closed and store it in a cool, dry place. Always use a clean, dry spoon.</p></details>
-          <details><summary>Which areas do you deliver to?</summary><p>Delivery availability depends on your location. Send us your area or PIN code on WhatsApp and we'll confirm.</p></details>
-          <details><summary>How do I place an order?</summary><p>Tap any “Order on WhatsApp” button, tell us the jar size and quantity, and we'll reply with the next steps.</p></details>
-          <details><summary>How can I pay?</summary><p>We'll confirm the available payment options directly with you when you place your order on WhatsApp. Payment is arranged with us directly; this website does not take online payments.</p></details>
-        </div>
+        <div class="faq-list" id="faq-list"></div>
       </div>
     </section>
 
-    <div class="yamuna-divider" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0 15C120 43 240 43 360 15S600-13 720 15s240 28 360 0 240-28 360 0M0 28c120 24 240 24 360 0s240-24 360 0 240 24 360 0 240-24 360 0"/></svg></div>
+    <div class="tagline-strip" id="tagline-strip">
+      <div class="tagline-track" id="tagline-track" aria-hidden="true"></div>
+    </div>
+
     <section class="contact-section" id="contact">
       <div class="wrap">
-        <p class="eyebrow">Let's get in touch</p>
-        <h2>Contact</h2>
-        <p>Message us to order or ask us anything about Gauriganesh Ghee.</p>
-        <div class="contact-actions">
-          <a class="button" href="https://wa.me/917839512687?text=Hi%2C%20I%20want%20to%20order%20Gauriganesh%20Ghee." target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
-          <a class="button button--outline" href="mailto:adityayadav792007@gmail.com">Email us</a>
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow" id="contact-eyebrow"></p>
+          <h2 id="contact-title"></h2>
+          <p class="section-copy" id="contact-intro"></p>
         </div>
-        <p class="reply-note">We reply on WhatsApp and email</p>
+        <div class="contact-grid">
+          <div class="contact-options" id="contact-options" data-reveal></div>
+          <form class="contact-form" id="contact-form" data-reveal>
+            <h3 id="form-title"></h3>
+            <p class="form-note" id="form-note"></p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="visitor-name" id="name-label"></label>
+                <input id="visitor-name" name="name" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="visitor-email" id="email-label"></label>
+                <input id="visitor-email" name="email" type="email" autocomplete="email">
+              </div>
+              <div class="field field--full">
+                <label for="visitor-message" id="message-label"></label>
+                <textarea id="visitor-message" name="message" required></textarea>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="button" type="submit" name="destination" value="whatsapp" id="form-whatsapp"></button>
+              <button class="button button--outline" type="submit" name="destination" value="email" id="form-email"></button>
+            </div>
+            <p class="form-error" id="form-error" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap footer-inner">
-      <p>© <span id="year">2026</span> Gauriganesh Ghee. All rights reserved.</p>
-      <!-- SOCIAL PLACEHOLDERS: replace # with your real social profile URLs, or remove links you don't use. -->
-      <div class="social-links" aria-label="Social media">
-        <a href="#" aria-label="Instagram placeholder">Instagram</a>
-        <a href="#" aria-label="Facebook placeholder">Facebook</a>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="footer-brand" id="footer-brand" href="#home"></a>
+          <p class="footer-tagline" id="footer-tagline"></p>
+        </div>
+        <div>
+          <h2 class="footer-title" id="footer-quick-title"></h2>
+          <nav class="footer-links" id="footer-quick-links" aria-label="Footer quick links"></nav>
+        </div>
+        <div>
+          <h2 class="footer-title" id="footer-contact-title"></h2>
+          <div class="footer-links" id="footer-contact-links"></div>
+        </div>
+        <div>
+          <h2 class="footer-title" id="footer-social-title"></h2>
+          <div class="footer-links" id="footer-social-links"></div>
+          <h2 class="footer-title" id="footer-policy-title" style="margin-top:20px"></h2>
+          <div class="footer-links" id="footer-policy-links"></div>
+        </div>
       </div>
-      <!-- FSSAI PLACEHOLDER: replace this text with your valid licence number, if applicable. -->
-      <p class="fssai">FSSAI Licence No.: [Add your licence number]</p>
+      <div class="footer-bottom">
+        <p id="copyright"></p>
+        <p id="footer-note"></p>
+      </div>
     </div>
   </footer>
 
-  <a class="floating-wa" href="https://wa.me/917839512687?text=Hi%2C%20I%20want%20to%20order%20Gauriganesh%20Ghee." target="_blank" rel="noopener noreferrer" aria-label="Order Gauriganesh Ghee on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4a11 11 0 0 0-9.4 16.7L5 27l6.5-1.6A11 11 0 1 0 16 4Z"/><path d="M12 11c-.5-.8-1-1-1.5-.5-.7.6-1.3 1.4-.7 2.8 1 2.5 3.2 4.7 5.7 5.8 1.4.6 2.2 0 2.8-.7.5-.5.3-1-.5-1.5l-1.5-.8-1.1 1.1a9 9 0 0 1-3.5-3.5l1.1-1.1Z"/></svg></a>
+  <a class="floating-wa" id="floating-whatsapp" href="#" target="_blank" rel="noopener noreferrer">
+    <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4a11 11 0 0 0-9.4 16.7L5 27l6.5-1.6A11 11 0 1 0 16 4Z"/><path d="M12 11c-.5-.8-1-1-1.5-.5-.7.6-1.3 1.4-.7 2.8 1 2.5 3.2 4.7 5.7 5.8 1.4.6 2.2 0 2.8-.7.5-.5.3-1-.5-1.5l-1.5-.8-1.1 1.1a9 9 0 0 1-3.5-3.5l1.1-1.1Z"/></svg>
+  </a>
+
   <script>
-    const menuButton = document.querySelector(".menu-toggle");
-    const navigation = document.querySelector("#primary-nav");
+    /* EDIT HERE: update editable site copy, contacts, product names, stats, links, FAQ and placeholders. */
+    const CONFIG = {
+      brand: "Gauriganesh Ghee",
+      brandHindi: "गौरी गणेश",
+      logoImage: "images/Gauri_Ganesh_Pure_Desi_Ghee.png",
+      tagline: "Tradition in every spoon, purity in every jar",
+      seo: {
+        title: "गौरी गणेश शुद्ध देसी घी | Gauriganesh Ghee",
+        description: "Discover Gauriganesh Ghee. Explore our ghee, learn about the traditional Bilona journey, and get in touch directly on WhatsApp or email.",
+        siteUrl: ""
+      },
+      ui: {
+        skipLink: "Skip to content",
+        dismissAnnouncement: "Dismiss announcement",
+        homeLinkLabel: "Gauriganesh Ghee home",
+        navLabel: "Main navigation",
+        headerWhatsapp: "WhatsApp Us",
+        openMenu: "Open menu",
+        closeMenu: "Close menu",
+        heroWhatsapp: "Order on WhatsApp",
+        heroEmail: "Email Us",
+        whatsappLabel: "WhatsApp",
+        whatsappCardTitle: "WhatsApp",
+        whatsappCardDescription: "Message us directly about our ghee.",
+        emailCardTitle: "Email",
+        previousReview: "Previous review",
+        nextReview: "Next review",
+        carouselLabel: "Customer review placeholders",
+        trustStripLabel: "Ghee qualities",
+        taglineStripLabel: "Pure Bilona Ghee, Made in India, 100% Natural, Farm to Family",
+        backdropLabel: "Close menu",
+        floatingWhatsapp: "Message Gauriganesh Ghee on WhatsApp",
+        year: 2026
+      },
+      contacts: {
+        whatsapp: "https://wa.me/917839512687",
+        whatsappMessage: "Hi Gauriganesh Ghee, I would like to know more about your ghee",
+        email: "adityayadav792007@gmail.com"
+      },
+      announcement: "Order via WhatsApp | Pure Bilona Ghee",
+      nav: [
+        { label: "Home", href: "#home" },
+        { label: "Our Ghee", href: "#our-ghee" },
+        { label: "Our Process", href: "#journey" },
+        { label: "About Us", href: "#about" },
+        { label: "FAQ", href: "#faq" },
+        { label: "Contact", href: "#contact" }
+      ],
+      hero: {
+        eyebrow: "शुद्धता की हर बूँद",
+        title: '<span lang="hi">गौरी गणेश शुद्ध देसी घी</span><span class="hero-title-english" lang="en">Pure Bilona Ghee, Made the Traditional Way</span>',
+        copy: "Discover our approach to traditional ghee-making. For product details or ordering, message us directly."
+      },
+      ghee: {
+        eyebrow: "From our kitchen",
+        title: "Choose the size that suits your kitchen",
+        intro: "Message us on WhatsApp to place an order.",
+        // Edit this array to change, add, or rename sizes, prices, and WhatsApp order text.
+        products: [
+          { size: "250 g", price: "₹299", whatsappText: "Hi Gauriganesh Ghee, I would like to order 250 g ghee (₹299)", archAngle: "135deg" },
+          { size: "500 g", price: "₹599", whatsappText: "Hi Gauriganesh Ghee, I would like to order 500 g ghee (₹599)", archAngle: "145deg" },
+          { size: "1000 ml", price: "₹999", whatsappText: "Hi Gauriganesh Ghee, I would like to order 1000 ml ghee (₹999)", archAngle: "125deg" }
+        ],
+        orderButton: "Order {SIZE} on WhatsApp"
+      },
+      trustPoints: ["100% Pure", "No Preservatives", "Farm Fresh", "Traditional Bilona Method", "Small Batch"],
+      stats: {
+        eyebrow: "Our commitment",
+        // PLACEHOLDER VALUES: replace null with verified numbers before publishing; "0" preservatives is the requested label.
+        items: [
+          { label: "Years of Tradition", value: null, display: "[Add number]", suffix: "+" },
+          { label: "Quality Checks", value: null, display: "[Add number]", suffix: "+" },
+          { label: "Preservatives", value: 0, display: "0", suffix: "" },
+          { label: "Happy Families", value: null, display: "[Add number]", suffix: "+" }
+        ]
+      },
+      about: {
+        eyebrow: "Our approach",
+        title: "Tradition, Thoughtfully Followed",
+        paragraphs: [
+          "At Gauriganesh Ghee, we value the care and patience behind traditional Bilona ghee-making. Our story is one of respecting familiar methods and sharing our ghee with families who appreciate tradition.",
+          "We continue to learn, prepare thoughtfully, and welcome your questions. Get in touch directly to learn more about our process."
+        ],
+        labReport: {
+          title: "Lab Report",
+          description: "Add a verified report link when you are ready to share it.",
+          button: "View Lab Report",
+          url: ""
+        }
+      },
+      journey: {
+        eyebrow: "The method, step by step",
+        title: "The Bilona Journey",
+        intro: "A traditional sequence, described in eight simple steps.",
+        steps: [
+          { title: "Our Cows / Farm", description: "The journey begins at the farm.", icon: "cow" },
+          { title: "Fresh Milk Collection", description: "Fresh milk is collected for preparation.", icon: "milk" },
+          { title: "Milk Set into Curd", description: "Milk is set into curd as part of the process.", icon: "bowl" },
+          { title: "Bilona Churning", description: "Curd is churned using the Bilona method.", icon: "churn" },
+          { title: "Slow-Cooked into Golden Ghee", description: "The butter is slowly cooked into ghee.", icon: "flame" },
+          { title: "Quality Checks", description: "The prepared ghee is checked with care.", icon: "check" },
+          { title: "Careful Packing", description: "Ghee is packed carefully for your kitchen.", icon: "jar" },
+          { title: "Delivered to Your Kitchen", description: "Get in touch to ask about delivery.", icon: "home" }
+        ]
+      },
+      why: {
+        eyebrow: "A thoughtful choice",
+        title: "Why Choose Us",
+        intro: "A considered approach to a traditional kitchen staple.",
+        items: [
+          { title: "Pure & Natural", description: "Made with a focus on simple, familiar ghee.", icon: "sparkle" },
+          { title: "Traditional Method", description: "The Bilona method guides our ghee-making journey.", icon: "churn" },
+          { title: "Small Batches", description: "Small-batch preparation keeps the process attentive.", icon: "bowl" },
+          { title: "Carefully Packed", description: "Each order is handled with care before dispatch.", icon: "package" },
+          { title: "Direct WhatsApp Support", description: "Ask your questions and place enquiries directly.", icon: "chat" },
+          { title: "Made for Your Kitchen", description: "A traditional staple for everyday recipes.", icon: "home" }
+        ]
+      },
+      reviews: {
+        eyebrow: "Your experience",
+        title: "Customer Notes",
+        intro: "Replace these clearly marked placeholders with genuine reviews only after receiving permission.",
+        items: [
+          { text: "[Add real review]", author: "[Add customer name]" },
+          { text: "[Add real review]", author: "[Add customer name]" },
+          { text: "[Add real review]", author: "[Add customer name]" }
+        ]
+      },
+      faq: {
+        eyebrow: "Good to know",
+        title: "Frequently Asked Questions",
+        intro: "Need another detail? Message us on WhatsApp or email.",
+        items: [
+          { question: "What is the Bilona method?", answer: "Bilona is a traditional method of churning curd to obtain butter, which is then slowly heated to make ghee. Ask us directly if you would like to know about our process." },
+          { question: "How long does it last?", answer: "Please refer to the best-before date on the product packaging. Store the ghee in a cool, dry place and use a clean, dry spoon." },
+          { question: "Is it lactose-free?", answer: "Ghee is clarified butter, but we cannot make a dietary or allergy guarantee for every product or individual. Please contact us with your requirements and consult a qualified health professional if needed." },
+          { question: "How is it different from store-bought ghee?", answer: "Methods and products vary. We can share details about our own preparation process directly so you can make an informed choice." },
+          { question: "Do you deliver across India?", answer: "Delivery availability depends on your location. Send us your PIN code on WhatsApp or email and we will confirm." },
+          { question: "How do I order?", answer: "Message us on WhatsApp or email with the product you are interested in. We will reply with availability and ordering details." }
+        ]
+      },
+      taglineStrip: "PURE BILONA GHEE • MADE IN INDIA • 100% NATURAL • FARM TO FAMILY •",
+      contact: {
+        eyebrow: "We would love to hear from you",
+        title: "Get in Touch",
+        intro: "For product questions, ordering enquiries, or delivery information, contact us directly.",
+        formTitle: "Send an enquiry",
+        formNote: "Choose WhatsApp or email; your message opens in that app.",
+        nameLabel: "Your name",
+        emailLabel: "Your email (optional)",
+        emailPlaceholder: "you@example.com",
+        messageLabel: "How can we help?",
+        whatsappButton: "Send via WhatsApp",
+        emailButton: "Send via Email",
+        validationMessage: "Please enter your name and a message."
+      },
+      footer: {
+        quickLinksTitle: "Quick Links",
+        contactTitle: "Contact",
+        socialTitle: "Follow Along",
+        policiesTitle: "Policies",
+        footerNote: "Questions? We are happy to help.",
+        socialLinks: [
+          { name: "Instagram", url: "#", icon: "◎" },
+          { name: "Facebook", url: "#", icon: "f" },
+          { name: "YouTube", url: "#", icon: "▶" }
+        ],
+        policyLinks: [
+          { name: "Privacy", url: "#" },
+          { name: "Shipping", url: "#" },
+          { name: "Refund", url: "#" },
+          { name: "Terms", url: "#" }
+        ]
+      },
+      icons: {
+        drop: '<path d="M16 3C12 9 7 14 7 20a9 9 0 0 0 18 0c0-6-5-11-9-17Z"/><path d="M12 21c1 2 2 3 5 3"/>',
+        bowl: '<path d="M5 15h22c-1 8-5 12-11 12S6 23 5 15Z"/><path d="M8 11c-2-3 2-4 0-7m8 7c-2-3 2-4 0-7m8 7c-2-3 2-4 0-7"/>',
+        leaf: '<path d="M26 5C14 4 6 8 6 18c0 5 4 8 8 8 10 0 13-9 12-21Z"/><path d="M5 28c5-8 10-12 18-17"/>',
+        cow: '<path d="M7 12 4 7l7 2 4-4 3 6h9l5-5 1 7 5 3-4 3v6H13v-6l-6-2z"/><path d="M17 25v4m13-4v4m-20-9-5 2"/>',
+        milk: '<path d="M12 4h8l2 5-2 3v15H9V12L7 9l2-5h3Z"/><path d="M9 12h11m-7-8v5"/>',
+        churn: '<path d="M9 11h14l-2 15H11L9 11Zm-2-4h18v4H7Zm9-2V2m-5 3V2m10 3V2"/>',
+        flame: '<path d="M17 3c1 6-4 7-3 12 1-2 3-3 5-4 4 5 4 10 1 14-4 5-13 3-14-4-1-5 2-9 6-13 0 5 2 6 2 6 0-5 3-7 3-11Z"/><path d="M14 28c-2-2-1-5 2-8 3 4 3 6 1 8"/>',
+        check: '<path d="M16 3 27 8v8c0 7-5 11-11 13C10 27 5 23 5 16V8l11-5Z"/><path d="m11 16 4 4 7-8"/>',
+        jar: '<path d="M10 6h12v4l3 3v13H7V13l3-3V6Zm0 4h12m-15 4h18"/><path d="M12 18h8"/>',
+        home: '<path d="m4 14 12-10 12 10v13H4V14Z"/><path d="M12 27V17h8v10"/>',
+        sparkle: '<path d="m16 3 2.5 9.5L28 16l-9.5 2.5L16 28l-2.5-9.5L4 16l9.5-3.5L16 3Z"/><path d="m25 3 .8 3.2L29 7l-3.2.8L25 11l-.8-3.2L21 7l3.2-.8L25 3Z"/>',
+        package: '<path d="m16 3 12 6v14l-12 6-12-6V9l12-6Z"/><path d="m4 9 12 6 12-6M16 15v14m-6-23 12 6"/>',
+        chat: '<path d="M27 15a11 11 0 0 1-11 11 12 12 0 0 1-5-.9L5 27l1.8-5A11 11 0 1 1 27 15Z"/><path d="M11 12c1 4 4 7 8 8l2-2-3-2-2 1c-1-1-2-2-3-3l1-2-2-3-1 1Z"/>',
+        email: '<rect x="3" y="6" width="26" height="20" rx="3"/><path d="m4 9 12 9L28 9"/>'
+      }
+    };
 
-    menuButton.addEventListener("click", () => {
-      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-      menuButton.setAttribute("aria-expanded", String(!isOpen));
-      menuButton.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
-      navigation.classList.toggle("is-open", !isOpen);
-    });
+    const byId = (id) => document.getElementById(id);
+    const icon = (name, className = "icon") => `<svg class="${className}" viewBox="0 0 32 32" aria-hidden="true">${CONFIG.icons[name] || CONFIG.icons.sparkle}</svg>`;
+    const whatsappUrl = (message = CONFIG.contacts.whatsappMessage) => `${CONFIG.contacts.whatsapp}?text=${encodeURIComponent(message)}`;
+    const setText = (id, value) => { byId(id).textContent = value; };
+    const makeLink = (label, href) => {
+      const link = document.createElement("a");
+      link.textContent = label;
+      link.href = href;
+      return link;
+    };
 
-    navigation.addEventListener("click", (event) => {
-      if (event.target instanceof HTMLAnchorElement) {
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.setAttribute("aria-label", "Open menu");
-        navigation.classList.remove("is-open");
+    document.title = CONFIG.seo.title;
+    byId("meta-description").content = CONFIG.seo.description;
+    byId("og-title").content = CONFIG.seo.title;
+    byId("og-description").content = CONFIG.seo.description;
+    byId("og-url").content = CONFIG.seo.siteUrl;
+    setText("skip-link", CONFIG.ui.skipLink);
+    byId("brand-mark").src = CONFIG.logoImage;
+    byId("header-brand").setAttribute("aria-label", `${CONFIG.brandHindi} — ${CONFIG.ui.homeLinkLabel}`);
+    byId("hero-logo-image").src = CONFIG.logoImage;
+    byId("favicon").href = CONFIG.logoImage;
+    document.querySelector('meta[property="og:image"]').content = CONFIG.logoImage;
+    byId("primary-nav").setAttribute("aria-label", CONFIG.ui.navLabel);
+    setText("announcement-text", CONFIG.announcement);
+    byId("announcement-close").setAttribute("aria-label", CONFIG.ui.dismissAnnouncement);
+    byId("nav-backdrop").setAttribute("aria-label", CONFIG.ui.backdropLabel);
+    byId("trust-strip").setAttribute("aria-label", CONFIG.ui.trustStripLabel);
+    byId("tagline-strip").setAttribute("aria-label", CONFIG.ui.taglineStripLabel);
+    byId("reviews-carousel").setAttribute("aria-label", CONFIG.ui.carouselLabel);
+    byId("review-previous").setAttribute("aria-label", CONFIG.ui.previousReview);
+    byId("review-next").setAttribute("aria-label", CONFIG.ui.nextReview);
+    setText("brand-name", CONFIG.brandHindi);
+    setText("brand-english", CONFIG.brand);
+    byId("primary-nav").innerHTML = CONFIG.nav.map((item) => `<a href="${item.href}">${item.label}</a>`).join("");
+    byId("header-whatsapp").href = whatsappUrl();
+    setText("header-whatsapp", CONFIG.ui.headerWhatsapp);
+    setText("menu-toggle", "☰");
+    byId("menu-toggle").setAttribute("aria-label", CONFIG.ui.openMenu);
+    byId("hero-whatsapp").href = whatsappUrl();
+    setText("hero-whatsapp", CONFIG.ui.heroWhatsapp);
+    byId("hero-email").href = `mailto:${CONFIG.contacts.email}`;
+    setText("hero-email", CONFIG.ui.heroEmail);
+    byId("floating-whatsapp").href = whatsappUrl();
+    byId("floating-whatsapp").setAttribute("aria-label", CONFIG.ui.floatingWhatsapp);
+    setText("hero-eyebrow", CONFIG.hero.eyebrow);
+    byId("hero-title").innerHTML = CONFIG.hero.title;
+    setText("hero-copy", CONFIG.hero.copy);
+
+    const trustGroupMarkup = CONFIG.trustPoints.map((point) => `<span class="marquee-item">${point}</span>`).join("");
+    byId("trust-marquee").innerHTML = `<div class="marquee-group">${trustGroupMarkup}</div><div class="marquee-group" aria-hidden="true">${trustGroupMarkup}</div>`;
+
+    setText("ghee-eyebrow", CONFIG.ghee.eyebrow);
+    setText("ghee-title", CONFIG.ghee.title);
+    setText("ghee-intro", CONFIG.ghee.intro);
+    byId("products-grid").innerHTML = CONFIG.ghee.products.map((product, index) => {
+      const message = product.whatsappText;
+      const buttonText = CONFIG.ghee.orderButton.replace("{SIZE}", product.size);
+      const gradientId = `jar-gold-${index}`;
+      return `<article class="product-card" data-reveal>
+        <div class="product-art" style="--arch-angle:${product.archAngle}">
+          <svg class="product-jar" viewBox="0 0 160 180" aria-hidden="true">
+            <defs>
+              <linearGradient id="${gradientId}" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0" stop-color="#F9D96C"/>
+                <stop offset="1" stop-color="#D99A22"/>
+              </linearGradient>
+            </defs>
+            <rect x="39" y="24" width="82" height="25" rx="7" fill="#A9722B"/>
+            <path d="M47 24v-5q0-5 5-5h56q5 0 5 5v5" fill="#A9722B" stroke="#8E5B20" stroke-width="2"/>
+            <rect x="30" y="43" width="100" height="119" rx="19" fill="url(#${gradientId})" stroke="#FFF9E9" stroke-width="9"/>
+            <rect x="45" y="78" width="70" height="53" rx="8" fill="#FFF6DD" stroke="#E8D8B1" stroke-width="1.5"/>
+            <text x="80" y="100" text-anchor="middle" fill="#563A20" font-family="Georgia,serif" font-size="12" font-weight="700">PURE</text>
+            <text x="80" y="117" text-anchor="middle" fill="#563A20" font-family="Georgia,serif" font-size="12" font-weight="700">GHEE</text>
+          </svg>
+        </div>
+        <div class="product-details">
+          <h3>${product.size}</h3>
+          <p class="product-price">Price: ${product.price}</p>
+          <a class="button button--small" href="${whatsappUrl(message)}" target="_blank" rel="noopener noreferrer">${buttonText}</a>
+        </div>
+      </article>`;
+    }).join("");
+
+    byId("stats-grid").innerHTML = CONFIG.stats.items.map((stat) => {
+      const display = stat.display || (stat.value === null ? "[Add number]" : String(stat.value));
+      const target = stat.value === null ? "" : ` data-count-target="${stat.value}" data-count-suffix="${stat.suffix || ""}"`;
+      return `<div class="stat" data-reveal><span class="stat-number"${target}>${display}</span><span class="stat-label">${stat.label}</span></div>`;
+    }).join("");
+
+    setText("about-eyebrow", CONFIG.about.eyebrow);
+    setText("about-title", CONFIG.about.title);
+    byId("about-copy").innerHTML = CONFIG.about.paragraphs.map((paragraph) => `<p class="section-copy">${paragraph}</p>`).join("");
+    if (CONFIG.about.labReport.url) {
+      const labCard = byId("lab-card");
+      labCard.hidden = false;
+      labCard.classList.add("is-visible");
+      setText("lab-title", CONFIG.about.labReport.title);
+      setText("lab-description", CONFIG.about.labReport.description);
+      setText("lab-link", CONFIG.about.labReport.button);
+      byId("lab-link").href = CONFIG.about.labReport.url;
+    }
+
+    setText("journey-eyebrow", CONFIG.journey.eyebrow);
+    setText("journey-title", CONFIG.journey.title);
+    setText("journey-intro", CONFIG.journey.intro);
+    byId("timeline").innerHTML = CONFIG.journey.steps.map((step, index) => `<li class="timeline-item" data-reveal style="--reveal-delay:${(index % 2) * 90}ms">
+      <article class="timeline-card">
+        <span class="timeline-icon">${icon(step.icon)}</span>
+        <h3>${step.title}</h3>
+        <p>${step.description}</p>
+      </article>
+    </li>`).join("");
+
+    setText("why-eyebrow", CONFIG.why.eyebrow);
+    setText("why-title", CONFIG.why.title);
+    setText("why-intro", CONFIG.why.intro);
+    byId("why-grid").innerHTML = CONFIG.why.items.map((item) => `<article class="why-card" data-reveal>${icon(item.icon)}<h3>${item.title}</h3><p>${item.description}</p></article>`).join("");
+
+    setText("reviews-eyebrow", CONFIG.reviews.eyebrow);
+    setText("reviews-title", CONFIG.reviews.title);
+    setText("reviews-intro", CONFIG.reviews.intro);
+    let activeReview = 0;
+    const renderReview = () => {
+      const review = CONFIG.reviews.items[activeReview];
+      byId("testimonial-card").innerHTML = `<div class="testimonial-mark" aria-hidden="true">“</div><blockquote class="testimonial-text">${review.text}</blockquote><p class="testimonial-author">${review.author}</p>`;
+      setText("review-status", `${activeReview + 1} / ${CONFIG.reviews.items.length}`);
+    };
+    const changeReview = (offset) => {
+      activeReview = (activeReview + offset + CONFIG.reviews.items.length) % CONFIG.reviews.items.length;
+      renderReview();
+    };
+    byId("review-previous").addEventListener("click", () => changeReview(-1));
+    byId("review-next").addEventListener("click", () => changeReview(1));
+    renderReview();
+
+    setText("faq-eyebrow", CONFIG.faq.eyebrow);
+    setText("faq-title", CONFIG.faq.title);
+    setText("faq-intro", CONFIG.faq.intro);
+    byId("faq-list").innerHTML = CONFIG.faq.items.map((item) => `<details class="faq-item" data-reveal><summary>${item.question}</summary><p>${item.answer}</p></details>`).join("");
+
+    const tagline = `${CONFIG.taglineStrip} `;
+    byId("tagline-track").innerHTML = `<span class="tagline-text">${tagline.repeat(2)}</span><span class="tagline-text" aria-hidden="true">${tagline.repeat(2)}</span>`;
+
+    setText("contact-eyebrow", CONFIG.contact.eyebrow);
+    setText("contact-title", CONFIG.contact.title);
+    setText("contact-intro", CONFIG.contact.intro);
+    setText("form-title", CONFIG.contact.formTitle);
+    setText("form-note", CONFIG.contact.formNote);
+    setText("name-label", CONFIG.contact.nameLabel);
+    setText("email-label", CONFIG.contact.emailLabel);
+    setText("message-label", CONFIG.contact.messageLabel);
+    setText("form-whatsapp", CONFIG.contact.whatsappButton);
+    setText("form-email", CONFIG.contact.emailButton);
+    byId("contact-options").innerHTML = `
+      <a class="contact-card" href="${whatsappUrl()}" target="_blank" rel="noopener noreferrer">
+        <span class="contact-card-icon">${icon("chat")}</span><span><strong>${CONFIG.ui.whatsappCardTitle}</strong><span>${CONFIG.ui.whatsappCardDescription}</span></span>
+      </a>
+      <a class="contact-card" href="mailto:${CONFIG.contacts.email}">
+        <span class="contact-card-icon">${icon("email")}</span><span><strong>${CONFIG.ui.emailCardTitle}</strong><span>${CONFIG.contacts.email}</span></span>
+      </a>`;
+    byId("visitor-email").placeholder = CONFIG.contact.emailPlaceholder;
+    byId("contact-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+      const name = String(formData.get("name") || "").trim();
+      const email = String(formData.get("email") || "").trim();
+      const message = String(formData.get("message") || "").trim();
+      const destination = event.submitter?.value;
+      const error = byId("form-error");
+      if (!name || !message) {
+        setText("form-error", CONFIG.contact.validationMessage);
+        (!name ? byId("visitor-name") : byId("visitor-message")).focus();
+        return;
+      }
+      setText("form-error", "");
+      const body = `Name: ${name}${email ? `\nEmail: ${email}` : ""}\n\n${message}`;
+      if (destination === "email") {
+        window.location.href = `mailto:${CONFIG.contacts.email}?subject=${encodeURIComponent(`Gauriganesh Ghee enquiry from ${name}`)}&body=${encodeURIComponent(body)}`;
+      } else {
+        window.open(whatsappUrl(`Hi Gauriganesh Ghee,\n\n${body}`), "_blank", "noopener,noreferrer");
       }
     });
 
-    document.querySelector("#year").textContent = new Date().getFullYear();
+    setText("footer-brand", CONFIG.brand);
+    setText("footer-tagline", CONFIG.tagline);
+    setText("footer-quick-title", CONFIG.footer.quickLinksTitle);
+    setText("footer-contact-title", CONFIG.footer.contactTitle);
+    setText("footer-social-title", CONFIG.footer.socialTitle);
+    setText("footer-policy-title", CONFIG.footer.policiesTitle);
+    byId("footer-quick-links").replaceChildren(...CONFIG.nav.map((item) => makeLink(item.label, item.href)));
+    byId("footer-contact-links").replaceChildren(
+      makeLink(CONFIG.ui.whatsappLabel, whatsappUrl()),
+      makeLink(CONFIG.contacts.email, `mailto:${CONFIG.contacts.email}`)
+    );
+    byId("footer-social-links").replaceChildren(...CONFIG.footer.socialLinks.map((item) => makeLink(`${item.icon} ${item.name}`, item.url)));
+    byId("footer-policy-links").replaceChildren(...CONFIG.footer.policyLinks.map((item) => makeLink(item.name, item.url)));
+    setText("copyright", `© ${CONFIG.ui.year} ${CONFIG.brand}`);
+    setText("footer-note", CONFIG.footer.footerNote);
 
-    /* MORPANKH LOAD ANIMATION: Inline SVG feathers play once, then the overlay is removed. */
-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      const featherOverlay = document.createElement("div");
-      featherOverlay.className = "morpankh-overlay";
-      featherOverlay.setAttribute("aria-hidden", "true");
+    byId("announcement-close").addEventListener("click", () => byId("announcement").remove());
 
-      const featherSvg = `
-        <svg viewBox="0 0 80 190" role="presentation">
-          <path d="M40 5C18 23 10 54 17 86c5 24 16 53 23 99 7-46 18-75 23-99C70 54 62 23 40 5Z" fill="#087c78"/>
-          <path d="M40 14C24 31 18 55 23 81c4 20 11 41 17 73 6-32 13-53 17-73 5-26-1-50-17-67Z" fill="#168f89"/>
-          <path d="M40 174C39 123 40 71 40 18M39 121 24 91m17 14 17-28M39 93 25 65m17 9 14-22m-16 17L31 49m10 7 11-18" fill="none" stroke="#f1d77d" stroke-linecap="round" stroke-width="2"/>
-          <ellipse cx="40" cy="48" rx="13" ry="19" fill="#d39a21"/>
-          <ellipse cx="40" cy="48" rx="8" ry="13" fill="#075c70"/>
-          <ellipse cx="40" cy="48" rx="3" ry="7" fill="#f1d77d"/>
-        </svg>`;
-      const feathers = [
-        { left: "3%", width: "48px", delay: "0s", duration: "5s", sway: "24px" },
-        { left: "17%", width: "62px", delay: ".16s", duration: "5.25s", sway: "-34px" },
-        { left: "34%", width: "45px", delay: ".32s", duration: "4.9s", sway: "28px" },
-        { left: "59%", width: "60px", delay: ".08s", duration: "5.4s", sway: "-30px" },
-        { left: "78%", width: "50px", delay: ".24s", duration: "5.1s", sway: "35px" },
-        { left: "92%", width: "42px", delay: ".4s", duration: "5.2s", sway: "-22px" }
-      ];
+    const menuButton = byId("menu-toggle");
+    const navigation = byId("primary-nav");
+    const backdrop = byId("nav-backdrop");
+    const closeMenu = () => {
+      navigation.classList.remove("is-open");
+      backdrop.classList.remove("is-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", CONFIG.ui.openMenu);
+      document.body.classList.remove("menu-open");
+    };
+    menuButton.addEventListener("click", () => {
+      const willOpen = menuButton.getAttribute("aria-expanded") !== "true";
+      navigation.classList.toggle("is-open", willOpen);
+      backdrop.classList.toggle("is-open", willOpen);
+      menuButton.setAttribute("aria-expanded", String(willOpen));
+      menuButton.setAttribute("aria-label", willOpen ? CONFIG.ui.closeMenu : CONFIG.ui.openMenu);
+      document.body.classList.toggle("menu-open", willOpen);
+    });
+    navigation.addEventListener("click", (event) => {
+      if (event.target instanceof HTMLAnchorElement) closeMenu();
+    });
+    backdrop.addEventListener("click", closeMenu);
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeMenu();
+    });
 
-      let completedFeathers = 0;
-      const removeFeatherOverlay = () => featherOverlay.remove();
-      feathers.forEach((feather) => {
-        const element = document.createElement("div");
-        element.className = "morpankh-feather";
-        element.innerHTML = featherSvg;
-        element.style.left = feather.left;
-        element.style.setProperty("--feather-width", feather.width);
-        element.style.setProperty("--fall-delay", feather.delay);
-        element.style.setProperty("--fall-duration", feather.duration);
-        element.style.setProperty("--sway", feather.sway);
-        element.addEventListener("animationend", () => {
-          completedFeathers += 1;
-          if (completedFeathers === feathers.length) removeFeatherOverlay();
-        }, { once: true });
-        featherOverlay.append(element);
-      });
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const revealElements = document.querySelectorAll("[data-reveal]");
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      revealElements.forEach((element) => element.classList.add("is-visible"));
+    } else {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: .12 });
+      revealElements.forEach((element) => revealObserver.observe(element));
+    }
 
-      document.body.append(featherOverlay);
-      window.setTimeout(removeFeatherOverlay, 6200);
+    const animateCounter = (element) => {
+      const target = Number(element.dataset.countTarget);
+      if (!Number.isFinite(target)) return;
+      const suffix = element.dataset.countSuffix || "";
+      const duration = 1000;
+      const start = performance.now();
+      const tick = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        element.textContent = `${Math.round(target * eased).toLocaleString()}${suffix}`;
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    if (!reduceMotion && "IntersectionObserver" in window) {
+      const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: .65 });
+      document.querySelectorAll("[data-count-target]").forEach((counter) => counterObserver.observe(counter));
     }
   </script>
 </body>
